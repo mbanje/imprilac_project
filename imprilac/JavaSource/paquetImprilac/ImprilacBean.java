@@ -21,6 +21,11 @@ import javax.faces.model.SelectItem;
 public class ImprilacBean {
 
 	
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	
 	
 	
@@ -33,6 +38,10 @@ public void setMessage(String message) {
 	this.message = message;
 }
 //Fin des proprietes communes
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 //Debut proprietes des personnes
@@ -40,7 +49,14 @@ private String nomPersonne=null;
 private String prenomPersonne=null;
 private Date dateNaissance=null;
 private int idPersonn=0;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 //private String date;
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+//private String date;
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 private int idcategoriePersonne;
 private String diplome=null;
 private String bureau=null;
@@ -54,6 +70,28 @@ private boolean showTel=false;
 private boolean modifier=false;
 private boolean modifierComptel1=true;
 private boolean modifierCompte=false;
+<<<<<<< HEAD
+<<<<<<< HEAD
+private boolean showdesignation;
+private boolean showhistorisation;
+private boolean showNumeroLigne;
+
+private int numeroLigne=0;
+private int idCompte;
+private int numLigneUtiliseSurPageCompte=0;
+private int idHistorisation;
+private int numero;
+private int qtiteMatEnStock;
+
+private String designation=null;
+private String historisation=null;
+private String message;
+
+private static List<SelectItem> listper;
+private static List<SelectItem> listper2;
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 private int numeroLigne=0;
 private int idCompte;
 private int numLigneUtiliseSurPageCompte=0;
@@ -65,26 +103,78 @@ private int numLigneUtiliseSurPageCompte=0;
 private static List<SelectItem> listper;
 private static List<SelectItem> listper2;
 private static List<ImprilacBean> listDesPersoAyantLogEtPw;
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 private static List<SelectItem> listDesPersoAyantLogEtPassW;
 private static ArrayList listCopieLogin=null;
 
 private String type=null;
-
-private int numero;
-
-
-private ImprilacBean selected=null;
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 private String nouveauLogin=null;
 private String nouveauPassWord=null;
 
 
+private static List<SelectItem> listMat;
+private static List<SelectItem> listProduit;
+private static List<SelectItem> listMaterielProduit;
+private static List<SelectItem> listTypes;
+private static List<SelectItem> listhistorisation;
+
+private static List<ImprilacBean> listDesPersoAyantLogEtPw;
+private static List<ImprilacBean> listMaterielProduits;
+=======
+
+private int numero;
+
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+
+private int numero;
+
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+
+private ImprilacBean selected=null;
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+private String nouveauLogin=null;
+private String nouveauPassWord=null;
+
+
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+public int getQtiteMatEnStock() {
+	return qtiteMatEnStock;
+}
+public void setQtiteMatEnStock(int qtiteMatEnStock) {
+	this.qtiteMatEnStock = qtiteMatEnStock;
+}
+public String getMessage() {
+	return message;
+}
+public void setMessage(String message) {
+	this.message = message;
+}
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public String getNouveauLogin() {
 	return nouveauLogin;
 }
@@ -103,6 +193,11 @@ public ImprilacBean getSelected() {
 public void setSelected(ImprilacBean selected) {
 	this.selected = selected;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 
@@ -113,6 +208,10 @@ public void setSelected(ImprilacBean selected) {
 
 
 
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public int getNumero() {
 	return numero;
 }
@@ -126,6 +225,11 @@ public String getType() {
 public void setType(String type) {
 	this.type = type;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 private boolean showdesignation;
 private boolean showhistorisation;
@@ -137,12 +241,21 @@ private static List<SelectItem> listMaterielProduit;
 
 private String designation=null;
 private String historisation=null;
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public String getHistorisation() {
 	return historisation;
 }
 public void setHistorisation(String historisation) {
 	this.historisation = historisation;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 private int idHistorisation;
@@ -151,6 +264,10 @@ private static List<SelectItem> listhistorisation;
 
 
 
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public boolean isShowNumeroLigne() {
 	return showNumeroLigne;
 }
@@ -197,6 +314,11 @@ public static void setListMat(List<SelectItem>listMat) {
 	ImprilacBean.listMat = listMat;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 private static List<ImprilacBean> listMaterielProduits;
 
 
@@ -205,6 +327,10 @@ private static List<ImprilacBean> listMaterielProduits;
 
 
 
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public int getNumLigneUtiliseSurPageCompte() {
 	return numLigneUtiliseSurPageCompte;
 }
@@ -218,8 +344,16 @@ public void setModifierComptel1(boolean modifierComptel1) {
 	this.modifierComptel1 = modifierComptel1;
 }
 public List<SelectItem> getListper2() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 	
 	//this.modifier=true;
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+	
+	//this.modifier=true;
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	 
 	ResultSet res=null;
 
@@ -355,10 +489,20 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==1)//ON A CHOISIE LE PROFIL CHEF DE PRODUCTION
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,chef_production c,compte co where p.Idpersonne=c.Idcheprod and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*	if(listPesonnes==null)
 		listPesonnes=new ArrayList<ImprilacBean>();
 	else
 		listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	try {
 		while(res.next())
 		{listCopieLogin.add(res.getString("Login").toString());
@@ -374,10 +518,20 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==2)//ON A CHOISIE LE PROFIL DU GERANT
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,gerant g,compte co where p.Idpersonne=g.Idgerant and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+		
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*	if(listPesonnes==null)
 		listPesonnes=new ArrayList<ImprilacBean>();
 	else
 		listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	try {
 		while(res.next())
 		{listCopieLogin.add(res.getString("Login").toString());
@@ -393,10 +547,19 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==3)//ON A CHOISIE LE PROFIL GESTIONNAIRE
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,gestionnaire g,compte co where p.Idpersonne=g.Idgestion and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{listCopieLogin.add(res.getString("Login").toString());
@@ -412,10 +575,19 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==4)//ON A CHOISIE LE PROFIL CLIENT
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,client c,compte co where p.Idpersonne=c.Idclient and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{listCopieLogin.add(res.getString("Login").toString());
@@ -431,10 +603,19 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==5)//ON A CHOISIE LE PROFIL PRODUCTEUR
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,producteur pro,compte co where p.Idpersonne=pro.Idproduct and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{listCopieLogin.add(res.getString("Login").toString());
@@ -450,10 +631,19 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==6)//ON A CHOISIE LE PROFIL DU CAISSIER
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,caissier c,compte co where p.Idpersonne=c.Idcaissier and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{listCopieLogin.add(res.getString("Login").toString());
@@ -501,9 +691,18 @@ public void setListDesPersoAyantLogEtPw(
 }
 public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 	
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+
+
+	
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	ResultSet res=null;
 	ImprilacBean chef=null;
 	
@@ -515,10 +714,20 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==1)//ON A CHOISIE LE PROFIL CHEF DE PRODUCTION
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,chef_production c,compte co where p.Idpersonne=c.Idcheprod and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*	if(listPesonnes==null)
 		listPesonnes=new ArrayList<ImprilacBean>();
 	else
 		listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	try {this.numLigneUtiliseSurPageCompte=0;
 		while(res.next())
 		{chef=new ImprilacBean();
@@ -543,10 +752,20 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==2)//ON A CHOISIE LE PROFIL DU GERANT
 	{	
 		res=Connecteur.Extrairedonnees("select * from personne p,gerant g,compte co where p.Idpersonne=g.Idgerant and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*	if(listPesonnes==null)
 		listPesonnes=new ArrayList<ImprilacBean>();
 	else
 		listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	try {this.numLigneUtiliseSurPageCompte=0;
 		while(res.next())
 		{chef=new ImprilacBean();
@@ -571,10 +790,20 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==3)//ON A CHOISIE LE PROFIL GESTIONNAIRE
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,gestionnaire g,compte co where p.Idpersonne=g.Idgestion and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {this.numLigneUtiliseSurPageCompte=0;
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -598,10 +827,20 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==4)//ON A CHOISIE LE PROFIL CLIENT
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,client c,compte co where p.Idpersonne=c.Idclient and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {this.numLigneUtiliseSurPageCompte=0;
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -625,10 +864,20 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==5)//ON A CHOISIE LE PROFIL PRODUCTEUR
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,producteur pro,compte co where p.Idpersonne=pro.Idproduct and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {this.numLigneUtiliseSurPageCompte=0;
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -653,10 +902,20 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==6)//ON A CHOISIE LE PROFIL DU CAISSIER
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,caissier c,compte co where p.Idpersonne=c.Idcaissier and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {this.numLigneUtiliseSurPageCompte=0;
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -688,10 +947,19 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 
 	return listDesPersoAyantLogEtPw;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*public static void setListDesPersoAyantLogEtPw(
 		List<SelectItem> listDesPersoAyantLogEtPw) {
 	ImprilacBean.listDesPersoAyantLogEtPw = listDesPersoAyantLogEtPw;
 }*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 public int getIdPerso() {
@@ -791,6 +1059,11 @@ public void setTel(String tel) {
 private static List<ImprilacBean> listPesonnes;
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*private static List<ImprilacBean> listChefProd;
 private static List<ImprilacBean> listGerant;
 private static List<ImprilacBean> listGestionaire;
@@ -800,6 +1073,10 @@ private static List<ImprilacBean> listCaissier;*/
 
 
 
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 public void buildListDesPers()//DEBUT DE LA FONCTION QUI NOUS PERMET DE PASSER AU MODE MODIFIER ET DE CONSTRUIRE LA LISTE DES PERSONNES D'UNE CATEGORIE CHOISIE
 {this.modifier=true;
@@ -916,8 +1193,16 @@ if(idcategoriePersonne==6)//ON A CHOISIE LE PROFIL DU CAISSIER
 }
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+
+
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 if(idType==1)//ON MODIFIE LES MATERIELS
 {
 	res=Connecteur.Extrairedonnees("select * from materiel ");
@@ -973,6 +1258,13 @@ public  List<ImprilacBean> getListMaterielProduits() {
 		Matpro.numero=res.getInt("Idmateriel");
 		Matpro.designation=res.getString("Designation");
 		Matpro.historisation=res.getString("Historisation");
+<<<<<<< HEAD
+<<<<<<< HEAD
+		Matpro.qtiteMatEnStock=res.getInt("quantiteEnStocks");
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 		listMaterielProduits.add(Matpro);
 		}
@@ -1010,11 +1302,20 @@ public static void setListMaterielProduits(
 }
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public List<ImprilacBean> getListPesonnes() {
 
 	
@@ -1054,10 +1355,19 @@ public List<ImprilacBean> getListPesonnes() {
 	if(idcategoriePersonne==2)//ON A CHOISIE LE PROFIL DU GERANT
 	{	
 		res=Connecteur.Extrairedonnees("select * from personne p,gerant g where p.Idpersonne=g.Idgerant");
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*	if(listPesonnes==null)
 		listPesonnes=new ArrayList<ImprilacBean>();
 	else
 		listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	try {
 		while(res.next())
 		{chef=new ImprilacBean();
@@ -1079,10 +1389,20 @@ public List<ImprilacBean> getListPesonnes() {
 	if(idcategoriePersonne==3)//ON A CHOISIE LE PROFIL GESTIONNAIRE
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,gestionnaire g where p.Idpersonne=g.Idgestion");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -1103,10 +1423,20 @@ public List<ImprilacBean> getListPesonnes() {
 	if(idcategoriePersonne==4)//ON A CHOISIE LE PROFIL CLIENT
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,client c where p.Idpersonne=c.Idclient");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -1127,10 +1457,20 @@ public List<ImprilacBean> getListPesonnes() {
 	if(idcategoriePersonne==5)//ON A CHOISIE LE PROFIL PRODUCTEUR
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,producteur pro where p.Idpersonne=pro.Idproduct");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -1152,10 +1492,20 @@ public List<ImprilacBean> getListPesonnes() {
 	if(idcategoriePersonne==6)//ON A CHOISIE LE PROFIL DU CAISSIER
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,caissier c where p.Idpersonne=c.Idcaissier");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(listPesonnes==null)
 			listPesonnes=new ArrayList<ImprilacBean>();
 		else
 			listPesonnes.clear();*/
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -1194,6 +1544,12 @@ public void setIdPersonn(int idPersonn) {
 public void setListPesonnes(List<ImprilacBean> listPesonnes) {
 	ImprilacBean.listPesonnes = listPesonnes;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*public static List<ImprilacBean> getListChefProd(){
 	ResultSet res=null;
 	ImprilacBean chef=null;
@@ -1357,6 +1713,10 @@ public static void setListCaissier(List<ImprilacBean> listCaissier) {
 	ImprilacBean.listCaissier = listCaissier;
 }*/
 //FIN DES LISTES DES PERSONNES
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 //Debut des proprietes pour l'authentification
 private String login=null;
@@ -1397,10 +1757,19 @@ public void setIdPersonne(int idPersonne) {
 									
 //Debut de la partie pour les materiaux et produits
 private int idType;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 //private String designation;
 //private int idHistorisation;
 //private static List<SelectItem> listTypes;
 //private static List<SelectItem> listhistorisation;
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 public int getIdType() {
@@ -1464,7 +1833,16 @@ public void enregistreMaterielProd()
 	
 	 
 	if(this.idType==1)//ON INSERT UN MATERIEL
+<<<<<<< HEAD
+<<<<<<< HEAD
+	  {  ResultSet res=null;
+		if(this.designation==null||this.designation=="")
+=======
 	  {   if(this.designation==null||this.designation=="")
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+	  {   if(this.designation==null||this.designation=="")
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	      { 
 		   message="TAPEZ LE NOM DU MATERIEL S'IL VOUS PLAIT!";
 		   return; 
@@ -1474,7 +1852,27 @@ public void enregistreMaterielProd()
 	      message="DIRER S'IL NECESSAIRE D'HISTORISER OU PAS SVP!";
 	      return;
 	      }  
+<<<<<<< HEAD
+<<<<<<< HEAD
+	      
+	      res=Connecteur.Extrairedonnees("select * from materiel where Designation='"+this.designation+"'");
+	      try {
+			if(res.next())
+			  {message="CE MATERIEL EXISTE DEJA!!";
+				return; 
+			  }
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	      
+		   n=Connecteur.Insererdonnees("insert into materiel(Designation,Historisation,quantiteEnStocks) values ('"+this.designation+"','"+this.historisation+"',0)");
+=======
 		   n=Connecteur.Insererdonnees("insert into materiel(Designation,Historisation) values ('"+this.designation+"','"+this.historisation+"')");
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+		   n=Connecteur.Insererdonnees("insert into materiel(Designation,Historisation) values ('"+this.designation+"','"+this.historisation+"')");
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		   if(n!=-1)
 			  message="INSERTION REUSSIE!";
 		 else
@@ -1487,11 +1885,36 @@ public void enregistreMaterielProd()
 	
 	if(this.idType==2)//ON INSERT UN PRODUIT
 	  {n=-1;
+<<<<<<< HEAD
+<<<<<<< HEAD
+	  ResultSet res=null;
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		if(this.designation==null||this.designation=="")
 	    {  
 		message="TAPEZ LE NOM DU PRODUIT S'IL VOUS PLAIT!";
 		return;
 	    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+		
+		res=Connecteur.Extrairedonnees("select * from produits where Type='"+this.designation+"'");
+		try {
+			if(res.next())
+			{message="CE PRODUIT EST DEJA ENREGISTRE!!";
+			return;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		n=Connecteur.Insererdonnees("insert into produits (Type) values ('"+this.designation+"')");
 		 if(n!=-1)
 			  message="INSERTION REUSSIE!";
@@ -1581,11 +2004,20 @@ public void enregistreMaterielProd()
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 //Categories des personnes
 private static List<SelectItem> listcategoriespersonnes=new ArrayList<SelectItem>();
 
@@ -1700,10 +2132,19 @@ return i;
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 
 
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 //DEBUT DE LA FONCTION QUI FAIT L'INSERTION ET LA MODIFICATION DANS LA TABLE PERSONNE
 public void insertPersonne()
 {
@@ -1811,6 +2252,13 @@ this.tel=null;
 	
 }//FIN DE LA PARTIE D'INSERTION
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+//FIN DE LA FONCTION UTILISEE POUR INSERRER DANS LES TABLES DES PERSONNES
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 
@@ -2019,6 +2467,10 @@ if(this.modifier==true)//DEBUT DE LA PARTIE DES MODIFICATIONS
 
 }
 //FIN DE LA FONCTION UTILISEE POUR INSERRER ET MODIFIER DANS LES TABLES DES PERSONNES
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 public void modifierPersonne()
@@ -2169,11 +2621,20 @@ public String changeDateFormat(Date d)
   return f.format(d);
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 //
 
 //
 
 
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 //DEBUT DE LA FONCTION QUI FAIT L'INSERTION ET LA MODIFICATION DANS LA TABLE COMPTE
 
 public void insertDansCompte()
@@ -2260,6 +2721,18 @@ if(this.modifierCompte==false)//ON FAIT L'INSERTION DANS LA TABLE COMPTE
 		return;
 		}
 		
+<<<<<<< HEAD
+<<<<<<< HEAD
+		
+		
+//ON RECCUPERE LE LOGIN SELECTIONNE
+		pkCompte=listCopieLogin.get(idCompte).toString();
+		
+
+		//FIN DE LA PARTIE DE RECUPERATION DE LA CLE PRIMAIRE DE LA TABLE COMPTE
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*System.out.println("");
 System.out.println("");
 System.out.println("");
@@ -2406,6 +2879,10 @@ System.out.println("");*/
 		}
 		
 		//FIN DE LA PARTIE DE RECUPERATION DU CLE PRIMAIRE DE LA TABLE COMPTE
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		System.out.println("pkCompte AVANT LOGIN"+pkCompte);
 		System.out.println("pkCompte AVANT LOGIN"+pkCompte);
 		
@@ -2423,16 +2900,30 @@ System.out.println("");*/
 		
 
 		
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 /*		if(this.==0)
 		{message="CHOISISSER LA PERSONNE A QUI APPARTIENDRA LE COMPTE S'IL VOUS PLAIT!!";
 		return;
 		}*/
 		
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		if(n==-1)
 		message="ECHEC DE MISE A JOUR!!";
 		else
 		message="MISE A JOUR REUSSIE!!";
 		
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		
 		//r=Connecteur.Extrairedonnees("select * from compte where Login='"+this.login+"'");
 /*		try {
@@ -2457,6 +2948,10 @@ System.out.println("");*/
 		
 		
 
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	this.modifierCompte=false;
 	this.modifierComptel1=true;
 	}//FIN DE LA PARTIE DE MODIFICATION DES COMPTES
@@ -2548,12 +3043,25 @@ public void identification()
 	//FIN DU TEST QUE LA PERSONNE EST UN CAISSIER
 	
 	message="VOUS N'ETES PAS RECONNU PAR LE SYSTEME!!!";
+<<<<<<< HEAD
+<<<<<<< HEAD
+	
+=======
 
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 }
 
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 private int idMateriel=0;
 private int quantiteMateriel=0;
 private String designationMat;
@@ -2700,4 +3208,8 @@ listDesProdDmd.clear();
 
 
 
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 }

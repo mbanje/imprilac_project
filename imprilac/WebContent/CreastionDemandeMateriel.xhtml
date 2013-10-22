@@ -9,7 +9,15 @@
   <head></head>
 
   <body>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <a4j:keepAlive beanName="demandeBine" />
+=======
     <a4j:keepAlive beanName="bine" />
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+    <a4j:keepAlive beanName="bine" />
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
      
 <rich:panel style ="width:500px;font-size:35px;margin-left:250px;" >
     
@@ -17,25 +25,55 @@
   <h:panelGrid columns="2">
  	<h:panelGrid columns="2">
   			<h:outputText value="MATERIEL    :"/>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  			<h:selectOneMenu value="#{demandeBine.idMateriel}">
+=======
   			<h:selectOneMenu value="#{bine.idMateriel}">
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+  			<h:selectOneMenu value="#{bine.idMateriel}">
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
   				<f:selectItems value="#{bine.listMat}"/>
   			</h:selectOneMenu>
 	</h:panelGrid>
     
     <h:panelGrid columns="2">
     	<h:outputText value="QUANTITE :" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+    	<h:inputText value="#{demandeBine.quantiteMateriel}" />
+    </h:panelGrid>
+    
+      <a4j:commandButton value="AJOUTER" action="#{demandeBine.ajouteMatSurCmd}"  reRender="tab"/>
+  	  <a4j:commandButton value="VALIDER" reRender="tab" action="#{demandeBine.creerDmdMateriel}" data="#{demandeBine.message}" oncomplete="alert(data)"/> 	
+=======
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
     	<h:inputText value="#{bine.quantiteMateriel}" />
     </h:panelGrid>
     
       <a4j:commandButton value="AJOUTER" action="#{bine.ajouteMatSurCmd}"  reRender="tab"/>
   	  <a4j:commandButton value="VALIDER" reRender="tab" action="#{bine.creerDmdMateriel}" data="#{bine.message}" oncomplete="alert(data)"/> 	
+<<<<<<< HEAD
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
  
  </h:panelGrid>
     </h:form>  
     
     
      <rich:panel>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  		<rich:dataTable id="tab" value="#{demandeBine.listDesProdDmd}" var="per">
+=======
   		<rich:dataTable id="tab" value="#{bine.listDesProdDmd}" var="per">
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
+=======
+  		<rich:dataTable id="tab" value="#{bine.listDesProdDmd}" var="per">
+>>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
   		<f:facet name="header">LISTE DES MATERIELS FIGURANT SUR UNE COMMANDE</f:facet>
   		
   		<rich:column>
