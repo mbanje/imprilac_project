@@ -7,17 +7,11 @@
   <managed-bean-class>paquetImprilac.ImprilacBean</managed-bean-class>
   <managed-bean-scope>request</managed-bean-scope>
  </managed-bean>
-<<<<<<< HEAD
-<<<<<<< HEAD
  <managed-bean>
   <managed-bean-name>demandeBine</managed-bean-name>
   <managed-bean-class>paquetImprilac.DemandeBean</managed-bean-class>
   <managed-bean-scope>request</managed-bean-scope>
  </managed-bean>
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
  <application>
   <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
  </application>

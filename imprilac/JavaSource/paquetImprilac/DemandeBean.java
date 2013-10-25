@@ -25,6 +25,8 @@ public class DemandeBean {
 	private List<SelectItem> listMatAccordees;
 	private List<SelectItem> listDmdPourHisto;
 	private List<SelectItem> listDMatPourHisto;
+	private List<SelectItem> listDesEtatsDesMat;
+	private List<DemandeBean> listAHistoriser;
 	//Liste des materiaux non encore evaluees(par le gerant)
 	//se trouvant sur une demande.
 	private List<SelectItem> listDesMatNonEvalueSeTrouvSurUneDmd;
@@ -32,16 +34,62 @@ public class DemandeBean {
 	private String prenom;
 	private String autorisation=null;
 	private String motivation;
+	private int etatMat;
+	private String etatMatString;
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public String getEtatMatString() {
+		return etatMatString;
+	}
+	public void setEtatMatString(String etatMatString) {
+		this.etatMatString = etatMatString;
+	}
+	public List<DemandeBean> getListAHistoriser() {
+		
+		
+		return listAHistoriser;
+	}
+	public void setListAHistoriser(List<DemandeBean> listAHistoriser) {
+		this.listAHistoriser = listAHistoriser;
+	}
 
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+	public int getEtatMat() {
+		return etatMat;
+	}
+	public void setEtatMat(int etatMat) {
+		this.etatMat = etatMat;
+	}
+	public List<SelectItem> getListDesEtatsDesMat() {
+		if(listDesEtatsDesMat==null)
+			listDesEtatsDesMat=new ArrayList<SelectItem>();
+		else 
+			listDesEtatsDesMat.clear();
+		
+		listDesEtatsDesMat.add(new SelectItem(0,""));
+		listDesEtatsDesMat.add(new SelectItem(1,"BON ETAT"));
+		listDesEtatsDesMat.add(new SelectItem(2,"EN PANNE"));
+		
+		return listDesEtatsDesMat;
+	}
+
+
+	public void setListDesEtatsDesMat(List<SelectItem> listDesEtatsDesMat) {
+		this.listDesEtatsDesMat = listDesEtatsDesMat;
+	}
+
+
 	public List<SelectItem> getListDMatPourHisto() {
 		
 		ResultSet res=null;
@@ -50,7 +98,7 @@ public class DemandeBean {
 		else
 			listDMatPourHisto.clear();
 		
-		res=Connecteur.Extrairedonnees("select m.Idmateriel,m.Designation from unite_dmde uni,materiel m where uni.Iddmd="+this.idDmd+" and uni.Idgestion is not null and uni.Idmateriel=m.Idmateriel and m.Historisation='OUI'");
+		res=Connecteur.Extrairedonnees("select m.Idmateriel,m.Designation from unite_dmde uni,materiel m where uni.Iddmd="+this.idDmd+" and uni.Historise='NON' and uni.Idgestion is not null and uni.Idmateriel=m.Idmateriel and m.Historisation='OUI'");
 		
 		listDMatPourHisto.add(new SelectItem(0," "));
 		try {
@@ -81,8 +129,8 @@ public class DemandeBean {
 		else
 			listDmdPourHisto.clear();
 		
-		res=Connecteur.Extrairedonnees("select Iddemande from demande where Iddemande in (Select d.Iddemande from demande d,unite_dmde u where d.Iddemande=u.Iddmd and d.Iddemande in ( select uni.Iddmd from unite_dmde uni,materiel m where uni.Idgestion is not null and uni.Idmateriel=m.Idmateriel and m.Historisation='OUI'))");
-		
+		//res=Connecteur.Extrairedonnees("select Iddemande from demande where Iddemande in (Select d.Iddemande from demande d,unite_dmde u where d.Iddemande=u.Iddmd and d.Iddemande in ( select uni.Iddmd from unite_dmde uni,materiel m where uni.Idgestion is not null and uni.Idmateriel=m.Idmateriel and m.Historisation='OUI'))");
+		res=Connecteur.Extrairedonnees("select Iddemande from demande where Iddemande in (select uni.Iddmd from unite_dmde uni,materiel m where uni.Idgestion is not null and uni.Historise='NON' and uni.Idmateriel=m.Idmateriel and m.Historisation='OUI')");
 		listDmdPourHisto.add(new SelectItem(0," "));
 		try {
 			while(res.next())
@@ -659,19 +707,60 @@ public class DemandeBean {
 	//FIN DE LA FONCTION QUI ECOUTE LE CHANGEMENT DE LA DEMANDE	
 	
 	
+	
+	//DEBUT DE LA FONCTION QUI CHERCHE ET RENVOIT LA CLE PRIMAIRE DE LA
+	//TABLE unite_dmde SACHANT LE NUMERO DE LA DEMANDE ET DU MATERIEL
+	
+	public int chercheIdUnite_dmde(int d,int m)
+	{int id=-1;
+	ResultSet res=Connecteur.Extrairedonnees("select Idunitedmd from unite_dmde where Iddmd="+d+" and Idmateriel="+m+"");
+	try {
+		if(res.next())
+		id=res.getInt("Idunitedmd");
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return id;
+	}
+	
+	//FIN DE LA FONCTION QUI CHERCHE ET RENVOIT LA CLE PRIMAIRE DE LA
+	//TABLE unite_dmde SACHANT LE NUMERO DE LA DEMANDE ET DU MATERIEL
+	
+	
+	
 	//DEBUT DE LA FONCTION QUI MARQUE LA SORTIE DES MATERIAUX
 	//DEMANDES
 	public void marquerSortieMat()
 	{	ResultSet res=null;
 		int n=-1,m=-1;
-		n=Connecteur.Insererdonnees("update unite_dmde set Idgestion=15 where Iddmd="+this.idDmd+" and Idmateriel="+this.idMateriel+"");
-res=Connecteur.Extrairedonnees("select * from unite_dmde where Iddmd="+this.idDmd+" and Autorisation='OUI' and Idgestion is null");	
+		n=Connecteur.Insererdonnees("update unite_dmde set Idgestion=15,Historise='NON' where Iddmd="+this.idDmd+" and Idmateriel="+this.idMateriel+"");
+   res=Connecteur.Extrairedonnees("select * from unite_dmde where Iddmd="+this.idDmd+" and Autorisation='OUI' and Idgestion is null");	
 try {
 	if(!res.next())
 		{res=Connecteur.Extrairedonnees("select * from unite_dmde where Iddmd="+this.idDmd+" and Idgerant is null");
 		if(!res.next())
 			m=Connecteur.Insererdonnees("update demande set Etatdmd='TERMINEE' where Iddemande="+this.idDmd+"");
 		}
+	
+res=Connecteur.Extrairedonnees("select * from materiel where Idmateriel="+this.idMateriel+" and Historisation='OUI'");
+if(res.next())
+{
+//(DEBUT)ON CREE DES ENREGISTREMENT DANS unites EN NOMBRE EGAL A LA QUANTITE
+//SORTIE
+	
+//ON RECUPERE LA CLE PRIMAIRE DE LA TABLE unite_dmde
+m=chercheIdUnite_dmde(this.idDmd,this.idMateriel);
+
+for(int i=1;i<=this.quantiteMatAccord;i++)
+{int k=-1;
+k=Connecteur.Insererdonnees("insert into unites (Idunitedmd) values ("+m+")");
+	}
+	
+//(FIN)ON CREE DES ENREGISTREMENT DANS unites EN NOMBRE EGAL A LA QUANTITE
+//SORTIE
+}
 	this.quantiteMatAccord=0;
 		if(n==-1)
 			message="OPERATION ECHOUEE!!";
@@ -687,5 +776,60 @@ try {
 	//FIN DE LA FONCTION QUI MARQUE LA SORTIE DES MATERIAUX
 	//DEMANDES
 	
+	
+public void ecouteAjouteHisto()
+{ResultSet res=null;
+if(this.idDmd==0)
+{message="CHOISISSER LA DEMANDE S'IL VOUS PLAIT!!";
+return;
+	}
+
+if(this.idMateriel==0)
+{message="CHOISISSER LE MATERIEL S'IL VOUS PLAIT!!";
+return;
+	}
+
+System.out.println("this.etatMat"+this.etatMat);
+
+
+/*listDesEtatsDesMat.add(new SelectItem(""));
+listDesEtatsDesMat.add(new SelectItem(""));*/
+System.out.println("111");
+System.out.println("this.etatMat"+this.etatMat);
+if(this.etatMat==0)
+{message="INDIQUER L'ETAT DU MATERIEL S'IL VOUS PLAIT!!";
+System.out.println("222");
+return;
+	}
+System.out.println("333");
+System.out.println("this.idMateriel"+this.idMateriel);
+System.out.println("444");
+if(this.etatMat==1)
+	this.etatMatString="BON ETAT";
+if(this.etatMat==2)
+	this.etatMatString="EN PANNE";
+
+res=Connecteur.Extrairedonnees("select Designation from materiel where Idmateriel="+this.idMateriel+"");
+try {
+	res.next();
+	System.out.println("555");
+	this.designationMat=res.getString("Designation");
+} catch (SQLException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+if(listAHistoriser==null)
+	listAHistoriser=new ArrayList<DemandeBean>();
+System.out.println("666");
+DemandeBean d=new DemandeBean();
+d.idDmd=this.idDmd;
+d.idMateriel=this.idMateriel;
+d.designationMat=this.designationMat;
+d.etatMatString=this.etatMatString;
+listAHistoriser.add(d);
+System.out.println("777");
+
+	}
+
 	
 }

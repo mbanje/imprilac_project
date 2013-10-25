@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2013 at 07:58 AM
+-- Generation Time: Oct 25, 2013 at 08:36 AM
 -- Server version: 5.1.49
 -- PHP Version: 5.3.3
 
@@ -209,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `demande` (
   `Etatdmd` varchar(20) NOT NULL,
   PRIMARY KEY (`Iddemande`),
   KEY `fkchef_produ` (`Idchefprod`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `demande`
@@ -224,10 +224,14 @@ INSERT INTO `demande` (`Iddemande`, `Idchefprod`, `Datedmd`, `Etatdmd`) VALUES
 (6, 3, '2013-10-20 21:55:29', 'ETUDIEE'),
 (7, 3, '2013-10-21 09:09:02', 'ETUDIEE'),
 (8, 3, '2013-10-21 09:12:37', 'ETUDIEE'),
-(9, 3, '2013-10-21 09:13:07', 'NON ETUDIEE'),
+(9, 3, '2013-10-21 09:13:07', 'ETUDE EN COURT'),
 (10, 3, '2013-10-21 09:13:53', 'ETUDIEE'),
 (11, 3, '2013-10-21 09:14:00', 'ETUDIEE'),
-(12, 3, '2013-10-21 09:14:17', 'NON ETUDIEE');
+(12, 3, '2013-10-21 09:14:17', 'ETUDE EN COURT'),
+(13, 3, '2013-10-23 17:26:40', 'ETUDIEE'),
+(14, 3, '2013-10-23 17:26:57', 'ETUDIEE'),
+(15, 3, '2013-10-23 17:27:12', 'ETUDIEE'),
+(16, 3, '2013-10-23 17:27:29', 'ETUDIEE');
 
 -- --------------------------------------------------------
 
@@ -436,20 +440,20 @@ CREATE TABLE IF NOT EXISTS `materiel` (
 --
 
 INSERT INTO `materiel` (`Idmateriel`, `Designation`, `Historisation`, `quantiteEnStocks`) VALUES
-(1, 'ffff', 'OUI', 0),
-(2, 'Papier', 'OUI', 80),
-(3, 'feuilles', 'NON', 45),
-(4, 'Chance', 'OUI', 90),
-(5, 'Film', 'NON', 0),
-(6, 'Machine de Finition', 'OUI', 0),
-(7, 'ma', 'OUI', 0),
-(8, 'mmmmmm', 'OUI', 0),
-(9, 'bbnk,', 'NON', 0),
-(10, 'feuilles', 'OUI', 0),
-(11, 'IMPRIMANTE', 'OUI', 0),
-(12, 'DESIGNATION', 'OUI', 0),
-(13, 'yhy', 'OUI', 0),
-(14, 'ffffg', 'OUI', 0);
+(1, 'ffff', 'OUI', 982),
+(2, 'Papier', 'OUI', 10090),
+(3, 'feuilles', 'NON', 9987),
+(4, 'Chance', 'OUI', 10080),
+(5, 'Film', 'NON', 9990),
+(6, 'Machine de Finition', 'OUI', 10000),
+(7, 'ma', 'OUI', 10000),
+(8, 'mmmmmm', 'OUI', 10000),
+(9, 'bbnk,', 'NON', 10000),
+(10, 'feuilles', 'OUI', 10000),
+(11, 'IMPRIMANTE', 'OUI', 10000),
+(12, 'DESIGNATION', 'OUI', 10000),
+(13, 'yhy', 'OUI', 10000),
+(14, 'ffffg', 'OUI', 10000);
 
 -- --------------------------------------------------------
 
@@ -591,16 +595,22 @@ CREATE TABLE IF NOT EXISTS `prod_paye` (
 CREATE TABLE IF NOT EXISTS `unites` (
   `Idunite` int(11) NOT NULL AUTO_INCREMENT,
   `Idunitedmd` int(11) NOT NULL,
-  `etat` varchar(20) NOT NULL,
-  `Date` datetime NOT NULL,
+  `etat` varchar(20) DEFAULT NULL,
+  `Date` datetime DEFAULT NULL,
   PRIMARY KEY (`Idunite`),
   KEY `fkunite_dmd` (`Idunitedmd`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `unites`
 --
 
+INSERT INTO `unites` (`Idunite`, `Idunitedmd`, `etat`, `Date`) VALUES
+(1, 28, NULL, NULL),
+(2, 28, NULL, NULL),
+(3, 28, NULL, NULL),
+(4, 28, NULL, NULL),
+(5, 28, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -619,45 +629,58 @@ CREATE TABLE IF NOT EXISTS `unite_dmde` (
   `Motivation` varchar(50) DEFAULT NULL,
   `Dateanalyse` datetime DEFAULT NULL,
   `Qtiteaccorde` int(11) DEFAULT NULL,
+  `Historise` varchar(5) DEFAULT NULL,
   PRIMARY KEY (`Idunitedmd`),
   UNIQUE KEY `cle_unik` (`Iddmd`,`Idmateriel`),
   KEY `fkmat` (`Idmateriel`),
   KEY `fkdmd` (`Iddmd`),
   KEY `fkgerant` (`Idgerant`),
   KEY `fkgestion` (`Idgestion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
 
 --
 -- Dumping data for table `unite_dmde`
 --
 
-INSERT INTO `unite_dmde` (`Idunitedmd`, `Idgerant`, `Iddmd`, `Idmateriel`, `Idgestion`, `Qtitedmd`, `Autorisation`, `Motivation`, `Dateanalyse`, `Qtiteaccorde`) VALUES
-(1, 9, 1, 2, 15, 25, 'OUI', '', '2013-10-20 22:15:02', 25),
-(2, 9, 1, 3, NULL, 40, 'NON', 'PAS MAINTENANT', '2013-10-20 22:21:16', 0),
-(3, 9, 2, 2, NULL, 34, 'NON', '', '2013-10-20 22:37:15', 0),
-(4, 9, 3, 2, NULL, 54, 'NON', 'ghhuu', '2013-10-21 09:00:34', 0),
-(5, 9, 3, 3, 15, 20, 'OUI', '', '2013-10-21 08:38:23', 20),
-(6, 9, 4, 2, NULL, 25, 'OUI', '', '2013-10-21 08:43:11', 10),
-(7, 9, 4, 5, NULL, 50, 'OUI', '', '2013-10-21 08:50:36', 18),
-(8, 9, 4, 10, NULL, 150, 'OUI', '', '2013-10-21 08:46:29', 19),
-(9, 9, 5, 12, 15, 45, 'OUI', '', '2013-10-20 22:42:48', 9),
-(10, 9, 6, 2, NULL, 4, 'NON', '', '2013-10-20 22:38:39', 0),
-(11, 9, 7, 2, NULL, 40, 'NON', 'Pae nec', '2013-10-21 09:18:00', 0),
-(12, 9, 7, 4, NULL, 20, 'NON', 'ndgdu', '2013-10-21 09:19:58', 0),
-(13, 9, 8, 3, NULL, 60, 'NON', 'rjfj', '2013-10-21 09:27:28', 0),
-(14, 9, 8, 2, NULL, 30, 'NON', 'hdhdh', '2013-10-21 09:22:18', 0),
-(15, NULL, 9, 5, NULL, 30, 'NON', NULL, NULL, NULL),
-(16, 9, 9, 2, NULL, 60, 'NON', 'djdjd', '2013-10-21 09:39:25', 0),
-(17, NULL, 9, 11, NULL, 30, 'NON', NULL, NULL, NULL),
-(18, NULL, 9, 3, NULL, 30, 'NON', NULL, NULL, NULL),
-(19, NULL, 9, 6, NULL, 30, 'NON', NULL, NULL, NULL),
-(20, 9, 10, 5, NULL, 90, 'NON', 'hhdhdhd', '2013-10-21 10:55:24', 0),
-(21, 9, 10, 3, NULL, 20, 'NON', 'sgtezjs', '2013-10-21 10:51:21', 0),
-(22, 9, 10, 11, NULL, 40, 'NON', 'ehdsds', '2013-10-21 10:56:30', 0),
-(23, 9, 11, 3, NULL, 20, 'NON', 'dhdhd', '2013-10-21 09:31:24', 0),
-(24, NULL, 12, 4, NULL, 20, 'NON', NULL, NULL, NULL),
-(25, NULL, 12, 3, NULL, 20, 'NON', NULL, NULL, NULL),
-(26, NULL, 12, 6, NULL, 20, 'NON', NULL, NULL, NULL);
+INSERT INTO `unite_dmde` (`Idunitedmd`, `Idgerant`, `Iddmd`, `Idmateriel`, `Idgestion`, `Qtitedmd`, `Autorisation`, `Motivation`, `Dateanalyse`, `Qtiteaccorde`, `Historise`) VALUES
+(1, 9, 1, 2, 15, 25, 'OUI', '', '2013-10-20 22:15:02', 25, NULL),
+(2, 9, 1, 3, NULL, 40, 'NON', 'PAS MAINTENANT', '2013-10-20 22:21:16', 0, NULL),
+(3, 9, 2, 2, NULL, 34, 'NON', '', '2013-10-20 22:37:15', 0, NULL),
+(4, 9, 3, 2, NULL, 54, 'NON', 'ghhuu', '2013-10-21 09:00:34', 0, NULL),
+(5, 9, 3, 3, 15, 20, 'OUI', '', '2013-10-21 08:38:23', 20, NULL),
+(6, 9, 4, 2, 15, 25, 'OUI', '', '2013-10-21 08:43:11', 10, 'NON'),
+(7, 9, 4, 5, NULL, 50, 'OUI', '', '2013-10-21 08:50:36', 18, NULL),
+(8, 9, 4, 10, NULL, 150, 'OUI', '', '2013-10-21 08:46:29', 19, NULL),
+(9, 9, 5, 12, 15, 45, 'OUI', '', '2013-10-20 22:42:48', 9, NULL),
+(10, 9, 6, 2, NULL, 4, 'NON', '', '2013-10-20 22:38:39', 0, NULL),
+(11, 9, 7, 2, NULL, 40, 'NON', 'Pae nec', '2013-10-21 09:18:00', 0, NULL),
+(12, 9, 7, 4, NULL, 20, 'NON', 'ndgdu', '2013-10-21 09:19:58', 0, NULL),
+(13, 9, 8, 3, NULL, 60, 'NON', 'rjfj', '2013-10-21 09:27:28', 0, NULL),
+(14, 9, 8, 2, NULL, 30, 'NON', 'hdhdh', '2013-10-21 09:22:18', 0, NULL),
+(15, 9, 9, 5, NULL, 30, 'OUI', '', '2013-10-23 17:34:06', 10, NULL),
+(16, 9, 9, 2, NULL, 60, 'NON', 'djdjd', '2013-10-21 09:39:25', 0, NULL),
+(17, NULL, 9, 11, NULL, 30, 'NON', NULL, NULL, NULL, NULL),
+(18, 9, 9, 3, NULL, 30, 'OUI', '', '2013-10-23 17:28:43', 30, NULL),
+(19, NULL, 9, 6, NULL, 30, 'NON', NULL, NULL, NULL, NULL),
+(20, 9, 10, 5, NULL, 90, 'NON', 'hhdhdhd', '2013-10-21 10:55:24', 0, NULL),
+(21, 9, 10, 3, NULL, 20, 'NON', 'sgtezjs', '2013-10-21 10:51:21', 0, NULL),
+(22, 9, 10, 11, NULL, 40, 'NON', 'ehdsds', '2013-10-21 10:56:30', 0, NULL),
+(23, 9, 11, 3, NULL, 20, 'NON', 'dhdhd', '2013-10-21 09:31:24', 0, NULL),
+(24, 9, 12, 4, NULL, 20, 'OUI', '', '2013-10-23 17:29:34', 10, NULL),
+(25, 9, 12, 3, NULL, 20, 'OUI', '', '2013-10-23 17:35:18', 10, NULL),
+(26, NULL, 12, 6, NULL, 20, 'NON', NULL, NULL, NULL, NULL),
+(27, 9, 13, 1, NULL, 10, 'OUI', '', '2013-10-23 17:36:50', 5, NULL),
+(28, 9, 13, 2, 15, 20, 'OUI', '', '2013-10-23 17:37:04', 5, 'NON'),
+(29, 9, 13, 3, NULL, 10, 'OUI', '', '2013-10-23 17:37:21', 5, NULL),
+(30, 9, 14, 3, NULL, 5, 'OUI', '', '2013-10-23 17:35:55', 5, NULL),
+(31, 9, 14, 2, NULL, 5, 'OUI', '', '2013-10-23 17:36:16', 5, NULL),
+(32, 9, 14, 1, NULL, 5, 'OUI', '', '2013-10-23 17:36:28', 4, NULL),
+(33, 9, 15, 1, NULL, 5, 'OUI', '', '2013-10-23 17:37:42', 4, NULL),
+(34, 9, 15, 2, NULL, 5, 'OUI', '', '2013-10-23 17:37:57', 4, NULL),
+(35, 9, 15, 3, NULL, 5, 'OUI', '', '2013-10-23 17:38:08', 4, NULL),
+(36, 9, 16, 1, NULL, 5, 'OUI', '', '2013-10-23 17:38:31', 5, NULL),
+(37, 9, 16, 2, NULL, 5, 'OUI', '', '2013-10-23 17:38:47', 4, NULL),
+(38, 9, 16, 3, NULL, 5, 'OUI', '', '2013-10-23 17:38:57', 4, NULL);
 
 --
 -- Constraints for dumped tables

@@ -21,27 +21,6 @@ import javax.faces.model.SelectItem;
 public class ImprilacBean {
 
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-	
-	
-	
-//Debut des proprietes communes
-private String message;
-public String getMessage() {
-	return message;
-}
-public void setMessage(String message) {
-	this.message = message;
-}
-//Fin des proprietes communes
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 //Debut proprietes des personnes
@@ -49,14 +28,6 @@ private String nomPersonne=null;
 private String prenomPersonne=null;
 private Date dateNaissance=null;
 private int idPersonn=0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-//private String date;
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
-//private String date;
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 private int idcategoriePersonne;
 private String diplome=null;
 private String bureau=null;
@@ -70,8 +41,6 @@ private boolean showTel=false;
 private boolean modifier=false;
 private boolean modifierComptel1=true;
 private boolean modifierCompte=false;
-<<<<<<< HEAD
-<<<<<<< HEAD
 private boolean showdesignation;
 private boolean showhistorisation;
 private boolean showNumeroLigne;
@@ -89,30 +58,10 @@ private String message;
 
 private static List<SelectItem> listper;
 private static List<SelectItem> listper2;
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-private int numeroLigne=0;
-private int idCompte;
-private int numLigneUtiliseSurPageCompte=0;
-
-
-
-
-
-private static List<SelectItem> listper;
-private static List<SelectItem> listper2;
-private static List<ImprilacBean> listDesPersoAyantLogEtPw;
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 private static List<SelectItem> listDesPersoAyantLogEtPassW;
 private static ArrayList listCopieLogin=null;
 
 private String type=null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 private String nouveauLogin=null;
 private String nouveauPassWord=null;
 
@@ -125,40 +74,15 @@ private static List<SelectItem> listhistorisation;
 
 private static List<ImprilacBean> listDesPersoAyantLogEtPw;
 private static List<ImprilacBean> listMaterielProduits;
-=======
-
-private int numero;
-
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
-
-private int numero;
-
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 private ImprilacBean selected=null;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-private String nouveauLogin=null;
-private String nouveauPassWord=null;
-
-
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 public int getQtiteMatEnStock() {
 	return qtiteMatEnStock;
 }
@@ -171,10 +95,6 @@ public String getMessage() {
 public void setMessage(String message) {
 	this.message = message;
 }
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public String getNouveauLogin() {
 	return nouveauLogin;
 }
@@ -193,25 +113,6 @@ public ImprilacBean getSelected() {
 public void setSelected(ImprilacBean selected) {
 	this.selected = selected;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public int getNumero() {
 	return numero;
 }
@@ -225,49 +126,12 @@ public String getType() {
 public void setType(String type) {
 	this.type = type;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-
-private boolean showdesignation;
-private boolean showhistorisation;
-private boolean showNumeroLigne;
-
-private static List<SelectItem> listMat;
-private static List<SelectItem> listProduit;
-private static List<SelectItem> listMaterielProduit;
-
-private String designation=null;
-private String historisation=null;
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public String getHistorisation() {
 	return historisation;
 }
 public void setHistorisation(String historisation) {
 	this.historisation = historisation;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-
-
-private int idHistorisation;
-private static List<SelectItem> listTypes;
-private static List<SelectItem> listhistorisation;
-
-
-
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public boolean isShowNumeroLigne() {
 	return showNumeroLigne;
 }
@@ -314,23 +178,6 @@ public static void setListMat(List<SelectItem>listMat) {
 	ImprilacBean.listMat = listMat;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-private static List<ImprilacBean> listMaterielProduits;
-
-
-
-
-
-
-
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public int getNumLigneUtiliseSurPageCompte() {
 	return numLigneUtiliseSurPageCompte;
 }
@@ -344,16 +191,6 @@ public void setModifierComptel1(boolean modifierComptel1) {
 	this.modifierComptel1 = modifierComptel1;
 }
 public List<SelectItem> getListper2() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-	
-	//this.modifier=true;
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
-	
-	//this.modifier=true;
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	 
 	ResultSet res=null;
 
@@ -489,20 +326,7 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==1)//ON A CHOISIE LE PROFIL CHEF DE PRODUCTION
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,chef_production c,compte co where p.Idpersonne=c.Idcheprod and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*	if(listPesonnes==null)
-		listPesonnes=new ArrayList<ImprilacBean>();
-	else
-		listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	try {
 		while(res.next())
 		{listCopieLogin.add(res.getString("Login").toString());
@@ -518,20 +342,7 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==2)//ON A CHOISIE LE PROFIL DU GERANT
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,gerant g,compte co where p.Idpersonne=g.Idgerant and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
 		
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*	if(listPesonnes==null)
-		listPesonnes=new ArrayList<ImprilacBean>();
-	else
-		listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	try {
 		while(res.next())
 		{listCopieLogin.add(res.getString("Login").toString());
@@ -547,19 +358,6 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==3)//ON A CHOISIE LE PROFIL GESTIONNAIRE
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,gestionnaire g,compte co where p.Idpersonne=g.Idgestion and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{listCopieLogin.add(res.getString("Login").toString());
@@ -575,19 +373,6 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==4)//ON A CHOISIE LE PROFIL CLIENT
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,client c,compte co where p.Idpersonne=c.Idclient and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{listCopieLogin.add(res.getString("Login").toString());
@@ -603,19 +388,6 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==5)//ON A CHOISIE LE PROFIL PRODUCTEUR
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,producteur pro,compte co where p.Idpersonne=pro.Idproduct and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{listCopieLogin.add(res.getString("Login").toString());
@@ -631,19 +403,6 @@ public List<SelectItem> getListDesPersoAyantLogEtPassW() {
 	if(idcategoriePersonne==6)//ON A CHOISIE LE PROFIL DU CAISSIER
 	{	numeroLigne=0;
 		res=Connecteur.Extrairedonnees("select * from personne p,caissier c,compte co where p.Idpersonne=c.Idcaissier and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{listCopieLogin.add(res.getString("Login").toString());
@@ -691,18 +450,6 @@ public void setListDesPersoAyantLogEtPw(
 }
 public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-	
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
-
-
-	
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	ResultSet res=null;
 	ImprilacBean chef=null;
 	
@@ -714,20 +461,7 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==1)//ON A CHOISIE LE PROFIL CHEF DE PRODUCTION
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,chef_production c,compte co where p.Idpersonne=c.Idcheprod and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*	if(listPesonnes==null)
-		listPesonnes=new ArrayList<ImprilacBean>();
-	else
-		listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	try {this.numLigneUtiliseSurPageCompte=0;
 		while(res.next())
 		{chef=new ImprilacBean();
@@ -752,20 +486,7 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==2)//ON A CHOISIE LE PROFIL DU GERANT
 	{	
 		res=Connecteur.Extrairedonnees("select * from personne p,gerant g,compte co where p.Idpersonne=g.Idgerant and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*	if(listPesonnes==null)
-		listPesonnes=new ArrayList<ImprilacBean>();
-	else
-		listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	try {this.numLigneUtiliseSurPageCompte=0;
 		while(res.next())
 		{chef=new ImprilacBean();
@@ -790,20 +511,7 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==3)//ON A CHOISIE LE PROFIL GESTIONNAIRE
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,gestionnaire g,compte co where p.Idpersonne=g.Idgestion and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {this.numLigneUtiliseSurPageCompte=0;
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -827,20 +535,7 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==4)//ON A CHOISIE LE PROFIL CLIENT
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,client c,compte co where p.Idpersonne=c.Idclient and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {this.numLigneUtiliseSurPageCompte=0;
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -864,20 +559,7 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==5)//ON A CHOISIE LE PROFIL PRODUCTEUR
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,producteur pro,compte co where p.Idpersonne=pro.Idproduct and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {this.numLigneUtiliseSurPageCompte=0;
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -902,20 +584,7 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 	if(idcategoriePersonne==6)//ON A CHOISIE LE PROFIL DU CAISSIER
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,caissier c,compte co where p.Idpersonne=c.Idcaissier and p.Idpersonne=co.Idpersonne order by p.Nompersonne");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {this.numLigneUtiliseSurPageCompte=0;
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -947,19 +616,6 @@ public List<ImprilacBean> getListDesPersoAyantLogEtPw() {
 
 	return listDesPersoAyantLogEtPw;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*public static void setListDesPersoAyantLogEtPw(
-		List<SelectItem> listDesPersoAyantLogEtPw) {
-	ImprilacBean.listDesPersoAyantLogEtPw = listDesPersoAyantLogEtPw;
-}*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 public int getIdPerso() {
@@ -1059,24 +715,6 @@ public void setTel(String tel) {
 private static List<ImprilacBean> listPesonnes;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*private static List<ImprilacBean> listChefProd;
-private static List<ImprilacBean> listGerant;
-private static List<ImprilacBean> listGestionaire;
-private static List<ImprilacBean> listClient;
-private static List<ImprilacBean> listEmploye;
-private static List<ImprilacBean> listCaissier;*/
-
-
-
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 public void buildListDesPers()//DEBUT DE LA FONCTION QUI NOUS PERMET DE PASSER AU MODE MODIFIER ET DE CONSTRUIRE LA LISTE DES PERSONNES D'UNE CATEGORIE CHOISIE
 {this.modifier=true;
@@ -1193,16 +831,6 @@ if(idcategoriePersonne==6)//ON A CHOISIE LE PROFIL DU CAISSIER
 }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
-
-
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 if(idType==1)//ON MODIFIE LES MATERIELS
 {
 	res=Connecteur.Extrairedonnees("select * from materiel ");
@@ -1258,13 +886,7 @@ public  List<ImprilacBean> getListMaterielProduits() {
 		Matpro.numero=res.getInt("Idmateriel");
 		Matpro.designation=res.getString("Designation");
 		Matpro.historisation=res.getString("Historisation");
-<<<<<<< HEAD
-<<<<<<< HEAD
 		Matpro.qtiteMatEnStock=res.getInt("quantiteEnStocks");
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 		listMaterielProduits.add(Matpro);
 		}
@@ -1302,20 +924,6 @@ public static void setListMaterielProduits(
 }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-
-
-
-
-
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 public List<ImprilacBean> getListPesonnes() {
 
 	
@@ -1355,19 +963,6 @@ public List<ImprilacBean> getListPesonnes() {
 	if(idcategoriePersonne==2)//ON A CHOISIE LE PROFIL DU GERANT
 	{	
 		res=Connecteur.Extrairedonnees("select * from personne p,gerant g where p.Idpersonne=g.Idgerant");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*	if(listPesonnes==null)
-		listPesonnes=new ArrayList<ImprilacBean>();
-	else
-		listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	try {
 		while(res.next())
 		{chef=new ImprilacBean();
@@ -1389,20 +984,7 @@ public List<ImprilacBean> getListPesonnes() {
 	if(idcategoriePersonne==3)//ON A CHOISIE LE PROFIL GESTIONNAIRE
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,gestionnaire g where p.Idpersonne=g.Idgestion");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -1423,20 +1005,7 @@ public List<ImprilacBean> getListPesonnes() {
 	if(idcategoriePersonne==4)//ON A CHOISIE LE PROFIL CLIENT
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,client c where p.Idpersonne=c.Idclient");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -1457,20 +1026,7 @@ public List<ImprilacBean> getListPesonnes() {
 	if(idcategoriePersonne==5)//ON A CHOISIE LE PROFIL PRODUCTEUR
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,producteur pro where p.Idpersonne=pro.Idproduct");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -1492,20 +1048,7 @@ public List<ImprilacBean> getListPesonnes() {
 	if(idcategoriePersonne==6)//ON A CHOISIE LE PROFIL DU CAISSIER
 	{
 		res=Connecteur.Extrairedonnees("select * from personne p,caissier c where p.Idpersonne=c.Idcaissier");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();*/
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		try {
 			while(res.next())
 			{chef=new ImprilacBean();
@@ -1544,179 +1087,7 @@ public void setIdPersonn(int idPersonn) {
 public void setListPesonnes(List<ImprilacBean> listPesonnes) {
 	ImprilacBean.listPesonnes = listPesonnes;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*public static List<ImprilacBean> getListChefProd(){
-	ResultSet res=null;
-	ImprilacBean chef=null;
-	res=Connecteur.Extrairedonnees("select * from personne p,chef_production c where p.Idpersonne=c.Idcheprod");
-	if(listChefProd==null)
-		listChefProd=new ArrayList<ImprilacBean>();
-	else
-		listChefProd.clear();
-	try {
-		while(res.next())
-		{chef=new ImprilacBean();
-		 chef.nomPersonne=res.getString("Nompersonne");
-		 chef.prenomPersonne=res.getString("Prenompersonne");
-		 chef.diplome=res.getString("Diplome");
-		 chef.dateNaissance=res.getDate("Datenaissance");
-		 chef.bureau=res.getString("Bureau");
-		 listChefProd.add(chef);
-		}
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	return listChefProd;
-}
-public static void setListChefProd(List<ImprilacBean> listChefProd) {
-	ImprilacBean.listChefProd = listChefProd;
-}
-public static List<ImprilacBean> getListGerant() {
-	ResultSet res=null;
-	ImprilacBean chef=null;
-	res=Connecteur.Extrairedonnees("select * from personne p,gerant g where p.Idpersonne=g.Idgerant");
-	if(listGerant==null)
-		listGerant=new ArrayList<ImprilacBean>();
-	else
-		listGerant.clear();
-	try {
-		while(res.next())
-		{chef=new ImprilacBean();
-		 chef.nomPersonne=res.getString("Nompersonne");
-		 chef.prenomPersonne=res.getString("Prenompersonne");
-		 chef.diplome=res.getString("Diplome");
-		 chef.dateNaissance=res.getDate("Datenaissance");
-		 chef.bureau=res.getString("Bureau");
-		 listGerant.add(chef);
-		}
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	return listGerant;
-}
-public static void setListGerant(List<ImprilacBean> listGerant) {
-	ImprilacBean.listGerant = listGerant;
-}
-public static List<ImprilacBean> getListGestionaire() {
-	ResultSet res=null;
-	ImprilacBean chef=null;
-	res=Connecteur.Extrairedonnees("select * from personne p,gestionnaire g where p.Idpersonne=g.Idgestion");
-	if(listGestionaire==null)
-		listGestionaire=new ArrayList<ImprilacBean>();
-	else
-		listGestionaire.clear();
-	try {
-		while(res.next())
-		{chef=new ImprilacBean();
-		 chef.nomPersonne=res.getString("Nompersonne");
-		 chef.prenomPersonne=res.getString("Prenompersonne");
-		 chef.diplome=res.getString("Diplome");
-		 chef.dateNaissance=res.getDate("Datenaissance");
-		 
-		 listGestionaire.add(chef);
-		}
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	return listGestionaire;
-}
-public static void setListGestionaire(List<ImprilacBean> listGestionaire) {
-	ImprilacBean.listGestionaire = listGestionaire;
-}
-public static List<ImprilacBean> getListClient() {
-	ResultSet res=null;
-	ImprilacBean chef=null;
-	res=Connecteur.Extrairedonnees("select * from personne p,client c where p.Idpersonne=c.Idclient");
-	if(listClient==null)
-		listClient=new ArrayList<ImprilacBean>();
-	else
-		listClient.clear();
-	try {
-		while(res.next())
-		{chef=new ImprilacBean();
-		 chef.nomPersonne=res.getString("Nompersonne");
-		 chef.prenomPersonne=res.getString("Prenompersonne");
-		 chef.tel=res.getString("tel");
-		 chef.dateNaissance=res.getDate("Datenaissance");
-		 
-		 listClient.add(chef);
-		}
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	return listClient;
-}
-public static void setListClient(List<ImprilacBean> listClient) {
-	ImprilacBean.listClient = listClient;
-}
-public static List<ImprilacBean> getListEmploye() {
-	ResultSet res=null;
-	ImprilacBean chef=null;
-	res=Connecteur.Extrairedonnees("select * from personne p,producteur pro where p.Idpersonne=pro.Idproduct");
-	if(listEmploye==null)
-		listEmploye=new ArrayList<ImprilacBean>();
-	else
-		listEmploye.clear();
-	try {
-		while(res.next())
-		{chef=new ImprilacBean();
-		 chef.nomPersonne=res.getString("Nompersonne");
-		 chef.prenomPersonne=res.getString("Prenompersonne");
-		 chef.diplome=res.getString("Diplome");
-		 chef.dateNaissance=res.getDate("Datenaissance");
-		 chef.bureau=res.getString("Bureau");
-		 listEmploye.add(chef);
-		}
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	return listEmploye;
-}
-public static void setListEmploye(List<ImprilacBean> listEmploye) {
-	ImprilacBean.listEmploye = listEmploye;
-}
-public static List<ImprilacBean> getListCaissier() {
-	ResultSet res=null;
-	ImprilacBean chef=null;
-	res=Connecteur.Extrairedonnees("select * from personne p,caissier c where p.Idpersonne=c.Idcaissier");
-	if(listCaissier==null)
-		listCaissier=new ArrayList<ImprilacBean>();
-	else
-		listCaissier.clear();
-	try {
-		while(res.next())
-		{chef=new ImprilacBean();
-		 chef.nomPersonne=res.getString("Nompersonne");
-		 chef.prenomPersonne=res.getString("Prenompersonne");
-		 chef.diplome=res.getString("Diplome");
-		 chef.dateNaissance=res.getDate("Datenaissance");
-		 
-		 listCaissier.add(chef);
-		}
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	return listCaissier;
-}
-public static void setListCaissier(List<ImprilacBean> listCaissier) {
-	ImprilacBean.listCaissier = listCaissier;
-}*/
-//FIN DES LISTES DES PERSONNES
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 //Debut des proprietes pour l'authentification
 private String login=null;
@@ -1757,19 +1128,6 @@ public void setIdPersonne(int idPersonne) {
 									
 //Debut de la partie pour les materiaux et produits
 private int idType;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-//private String designation;
-//private int idHistorisation;
-//private static List<SelectItem> listTypes;
-//private static List<SelectItem> listhistorisation;
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 public int getIdType() {
@@ -1833,16 +1191,8 @@ public void enregistreMaterielProd()
 	
 	 
 	if(this.idType==1)//ON INSERT UN MATERIEL
-<<<<<<< HEAD
-<<<<<<< HEAD
 	  {  ResultSet res=null;
 		if(this.designation==null||this.designation=="")
-=======
-	  {   if(this.designation==null||this.designation=="")
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
-	  {   if(this.designation==null||this.designation=="")
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	      { 
 		   message="TAPEZ LE NOM DU MATERIEL S'IL VOUS PLAIT!";
 		   return; 
@@ -1852,8 +1202,6 @@ public void enregistreMaterielProd()
 	      message="DIRER S'IL NECESSAIRE D'HISTORISER OU PAS SVP!";
 	      return;
 	      }  
-<<<<<<< HEAD
-<<<<<<< HEAD
 	      
 	      res=Connecteur.Extrairedonnees("select * from materiel where Designation='"+this.designation+"'");
 	      try {
@@ -1867,12 +1215,6 @@ public void enregistreMaterielProd()
 		}
 	      
 		   n=Connecteur.Insererdonnees("insert into materiel(Designation,Historisation,quantiteEnStocks) values ('"+this.designation+"','"+this.historisation+"',0)");
-=======
-		   n=Connecteur.Insererdonnees("insert into materiel(Designation,Historisation) values ('"+this.designation+"','"+this.historisation+"')");
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
-		   n=Connecteur.Insererdonnees("insert into materiel(Designation,Historisation) values ('"+this.designation+"','"+this.historisation+"')");
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		   if(n!=-1)
 			  message="INSERTION REUSSIE!";
 		 else
@@ -1885,20 +1227,12 @@ public void enregistreMaterielProd()
 	
 	if(this.idType==2)//ON INSERT UN PRODUIT
 	  {n=-1;
-<<<<<<< HEAD
-<<<<<<< HEAD
 	  ResultSet res=null;
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		if(this.designation==null||this.designation=="")
 	    {  
 		message="TAPEZ LE NOM DU PRODUIT S'IL VOUS PLAIT!";
 		return;
 	    }
-<<<<<<< HEAD
-<<<<<<< HEAD
 		
 		res=Connecteur.Extrairedonnees("select * from produits where Type='"+this.designation+"'");
 		try {
@@ -1911,10 +1245,6 @@ public void enregistreMaterielProd()
 			e.printStackTrace();
 		}
 		
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		n=Connecteur.Insererdonnees("insert into produits (Type) values ('"+this.designation+"')");
 		 if(n!=-1)
 			  message="INSERTION REUSSIE!";
@@ -2004,20 +1334,6 @@ public void enregistreMaterielProd()
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-
-
-
-
-
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 //Categories des personnes
 private static List<SelectItem> listcategoriespersonnes=new ArrayList<SelectItem>();
 
@@ -2132,19 +1448,6 @@ return i;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-
-
-
-
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 //DEBUT DE LA FONCTION QUI FAIT L'INSERTION ET LA MODIFICATION DANS LA TABLE PERSONNE
 public void insertPersonne()
 {
@@ -2252,225 +1555,8 @@ this.tel=null;
 	
 }//FIN DE LA PARTIE D'INSERTION
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 //FIN DE LA FONCTION UTILISEE POUR INSERRER DANS LES TABLES DES PERSONNES
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-
-
-
-/*
-if(this.modifier==true)//DEBUT DE LA PARTIE DES MODIFICATIONS
-{System.out.println("Je suis dans modifier!!!");
-	int n=-1;
-	if(this.idPerso==0)//SI ON N'A PAS SELECTIONNE LA PERSONNE A QUI CONCERNE LA MODIFICATION
-	{
-		message="SELECTIONNER LA PERSONNE SUR QUI VOUS VOULEZ FAIRE UNE MODIFICATION!!";
-		return;
-	}
-	if(this.nomPersonne.length()!=0)//ON MODIFIE LE NOM DE LA PERSONNE
-	{	n=-1;
-		n=Connecteur.Insererdonnees("update personne set Nompersonne='"+this.nomPersonne+"' where Idpersonne="+idPerso);
-		if(n==-1)
-		{
-			message="ECHEC DE MISE A JOUR!";
-			return;
-		}
-		else
-		{
-			message="MISE A JOUR REUSSIE!";
-		}
-	}
-
-
-	if(this.prenomPersonne.length()!=0)//ON MODIFIE LE PRENOM DE LA PERSONNE
-	{
-		n=-1;
-		n=Connecteur.Insererdonnees("update personne set Prenompersonne='"+this.prenomPersonne+"' where Idpersonne="+idPerso);
-		if(n==-1)
-		{
-			message="ECHEC DE MISE A JOUR!";
-			return;
-		}
-		else
-			message="MISE A JOUR REUSSIE!";
-	}
-
-
-
-	if(this.dateNaissance!=null)//ON MODIFIE LA DATE DE NAISSANCE DE LA PERSONNE
-	{
-		n=-1;
-		n=Connecteur.Insererdonnees("update personne set Datenaissance='"+this.changeDateFormat(this.dateNaissance)+"' where Idpersonne="+idPerso);
-		if(n==-1)
-		{
-			message="ECHEC DE MISE A JOUR!";
-			return;
-		}
-		else
-			message="MISE A JOUR REUSSIE!";
-	}
-
-
-
-
-
-	if(this.idcategoriePersonne==1)//ON FAIT LA MISE A JOUR DES CHAMPS DU CHEF DE PRODUCTION
-	{	
-		if(this.diplome.length()!=0)
-		{	
-			n=-1;
-			n=Connecteur.Insererdonnees("update chef_production set Diplome='"+this.diplome+"' where Idcheprod="+idPerso);
-			if(n==-1)
-			{
-				message="ECHEC DE MISE A JOUR!";
-				return;
-			}
-			else
-				message="MISE A JOUR REUSSIE!";
-		}
-		
-		if(this.bureau.length()!=0)//ON FAIT LA MISE A JOUR DU BUREAU
-		{	
-			n=-1;
-			n=Connecteur.Insererdonnees("update chef_production set Bureau='"+this.bureau+"' where Idcheprod="+idPerso);
-			if(n==-1)
-			{
-				message="ECHEC DE MISE A JOUR!";
-				return;
-			}
-			else
-				message="MISE A JOUR REUSSIE!";
-		}
-	}//FIN DE LA PARTIE DE MISE A JOUR DU CHEF DE PRODUCTION
-
-	
-	if(this.idcategoriePersonne==2)//ON FAIT LA MISE A JOUR DU GERANT
-	{	
-		n=-1;
-		if(this.diplome.length()!=0)
-		{	
-			n=-1;
-			n=Connecteur.Insererdonnees("update gerant set Diplome='"+this.diplome+"' where Idgerant="+idPerso);
-			if(n==-1)
-			{
-				message="ECHEC DE MISE A JOUR!";
-				return;
-			}
-			else
-				message="MISE A JOUR REUSSIE!";
-		}
-		
-		if(this.bureau.length()!=0)//ON FAIT LA MISE A JOUR DU BUREAU
-			
-		{	
-			n=-1;
-			n=Connecteur.Insererdonnees("update gerant set Bureau='"+this.bureau+"' where Idgerant="+idPerso);
-			if(n==-1)
-			{
-				message="ECHEC DE MISE A JOUR!";
-				return;
-			}
-			else
-				message="MISE A JOUR REUSSIE!";
-		}
-	}//FIN DE LA MISE A JOUR DU GERANT
-	
-
-	if(this.idcategoriePersonne==3)//ON FAIT LA MISE A JOUR DU GESTIONNAIRE
-	{	n=-1;
-		if(this.diplome.length()!=0)
-		{
-			n=-1;
-			n=Connecteur.Insererdonnees("update gestionnaire set Diplome='"+this.diplome+"' where Idgestion="+idPerso);
-			if(n==-1)
-			{
-				message="ECHEC DE MISE A JOUR!";
-				return;
-			}
-			else
-				message="MISE A JOUR REUSSIE!";
-		}
-
-	}//FIN DE LA MISE A JOUR DU GESTIONNAIRE
-
-
-	if(this.idcategoriePersonne==5)//ON FAIT LA MISE A JOUR DU PRODUCTEUR
-	{	n=-1;
-		if(this.diplome.length()!=0)
-		{	n=-1;
-			n=Connecteur.Insererdonnees("update producteur set Diplome='"+this.diplome+"' where Idproduct="+idPerso);
-			if(n==-1)
-			{
-				message="ECHEC DE MISE A JOUR!";
-				return;
-			}
-			else
-				message="MISE A JOUR REUSSIE!";
-		}
-		
-		if(this.bureau.length()!=0)//ON FAIT LA MISE A JOUR DU BUREAU
-		{
-			n=-1;
-			n=Connecteur.Insererdonnees("update producteur set Bureau='"+this.bureau+"' where Idproduct="+idPerso);
-			if(n==-1)
-			{
-				message="ECHEC DE MISE A JOUR!";
-				return;
-			}
-			else
-				message="MISE A JOUR REUSSIE!";
-		}
-	}//FIN DE LA MISE A JOUR PRODUCTEUR
-
-	
-	if(this.idcategoriePersonne==6)//ON FAIT LA MISE A JOUR DU CAISSIER
-	{	
-		if(this.diplome.length()!=0)
-		{
-			n=-1;
-			n=Connecteur.Insererdonnees("update caissier set Diplome='"+this.diplome+"' where Idcaissier="+idPerso);
-			if(n==-1)
-			{
-				message="ECHEC DE MISE A JOUR!";
-				return;
-			}
-			else
-				message="MISE A JOUR REUSSIE!";
-		}
-	}//FIN DE LA MISE A JOUR DU CAISSIER
-
-
-	if(this.idcategoriePersonne==4)//ON FAIT LA MISE A JOUR DU CLIENT
-	{	
-		n=-1;
-		if(this.tel.length()!=0)
-		{	n=-1;
-			n=Connecteur.Insererdonnees("update client set tel='"+this.tel+"' where Idclient="+idPerso);
-			if(n==-1)
-			{
-				message="ECHEC DE MISE A JOUR!";
-				return;
-			}
-			else
-				message="MISE A JOUR REUSSIE!";
-		}
-	}//FIN DE LA MISE A JOUR DU CLIENT
-
-	this.modifier=false;
-	
-}//FIN DE LA PARTIE DES MODIFICATIONS
-*/
-
-}
-//FIN DE LA FONCTION UTILISEE POUR INSERRER ET MODIFIER DANS LES TABLES DES PERSONNES
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 
 
 public void modifierPersonne()
@@ -2621,20 +1707,6 @@ public String changeDateFormat(Date d)
   return f.format(d);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-//
-
-//
-
-
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 //DEBUT DE LA FONCTION QUI FAIT L'INSERTION ET LA MODIFICATION DANS LA TABLE COMPTE
 
 public void insertDansCompte()
@@ -2721,8 +1793,6 @@ if(this.modifierCompte==false)//ON FAIT L'INSERTION DANS LA TABLE COMPTE
 		return;
 		}
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
 		
 		
 //ON RECCUPERE LE LOGIN SELECTIONNE
@@ -2730,159 +1800,6 @@ if(this.modifierCompte==false)//ON FAIT L'INSERTION DANS LA TABLE COMPTE
 		
 
 		//FIN DE LA PARTIE DE RECUPERATION DE LA CLE PRIMAIRE DE LA TABLE COMPTE
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*System.out.println("");
-System.out.println("");
-System.out.println("");
-System.out.println(Integer.reverse(this.idCompte));
-System.out.println(Integer.reverseBytes(this.idCompte));
-System.out.println(Integer.toBinaryString(idCompte));
-System.out.println(Integer.toHexString(idCompte));
-System.out.println(Integer.toString(idCompte));
-
-System.out.println("");
-System.out.println("");
-System.out.println("");*/
-		
-		
-		if(idcategoriePersonne==1)
-		{	//numeroLigne=1;
-/*			res=Connecteur.Extrairedonnees("select * from personne p,chef_production c,compte co where p.Idpersonne=c.Idcheprod and p.Idpersonne=co.Idpersonne");
-		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();
-		try {
-			while(res.next()&&(numeroLigne<this.idCompte))
-			{numeroLigne++;
-			//listDesPersoAyantLogEtPassW.add(new SelectItem(numeroLigne,res.getString("Login")));	
-			}*/
-			//pkCompte=res.getString("Login");
-/*		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		
-		pkCompte=listCopieLogin.get(idCompte).toString();
-		
-		}
-		
-		if(idcategoriePersonne==2)//ON A CHOISIE LE PROFIL DU GERANT
-		{/*	numeroLigne=1;
-			res=Connecteur.Extrairedonnees("select * from personne p,gerant g,compte co where p.Idpersonne=g.Idgerant and p.Idpersonne=co.Idpersonne");
-		if(listPesonnes==null)
-			listPesonnes=new ArrayList<ImprilacBean>();
-		else
-			listPesonnes.clear();
-		try {
-			while(res.next())
-				while(res.next()&&(numeroLigne<this.idCompte))
-				{numeroLigne++;
-				//listDesPersoAyantLogEtPassW.add(new SelectItem(numeroLigne,res.getString("Login")));	
-				}
-				pkCompte=res.getString("Login");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-			profil="DES GERANT";*/
-			
-			pkCompte=listCopieLogin.get(idCompte).toString();
-		}
-		
-		if(idcategoriePersonne==3)//ON A CHOISIE LE PROFIL GESTIONNAIRE
-		{/*	numeroLigne=1;
-			res=Connecteur.Extrairedonnees("select * from personne p,gestionnaire g,compte co where p.Idpersonne=g.Idgestion and p.Idpersonne=co.Idpersonne");
-			if(listPesonnes==null)
-				listPesonnes=new ArrayList<ImprilacBean>();
-			else
-				listPesonnes.clear();
-			try {
-				while(res.next()&&(numeroLigne<this.idCompte))
-				{numeroLigne++;
-				//listDesPersoAyantLogEtPassW.add(new SelectItem(numeroLigne,res.getString("Login")));	
-				}
-				pkCompte=res.getString("Login");
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		profil="GESTIONNAIRES";*/
-			pkCompte=listCopieLogin.get(idCompte).toString();
-		}
-		
-		if(idcategoriePersonne==4)//ON A CHOISIE LE PROFIL CLIENT
-		{	/*numeroLigne=1;
-			res=Connecteur.Extrairedonnees("select * from personne p,client c,compte co where p.Idpersonne=c.Idclient and p.Idpersonne=co.Idpersonne");
-			if(listPesonnes==null)
-				listPesonnes=new ArrayList<ImprilacBean>();
-			else
-				listPesonnes.clear();
-			try {
-				while(res.next()&&(numeroLigne<this.idCompte))
-				{numeroLigne++;
-				//listDesPersoAyantLogEtPassW.add(new SelectItem(numeroLigne,res.getString("Login")));	
-				}
-				pkCompte=res.getString("Login");
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			profil="CLIENTS";*/
-			pkCompte=listCopieLogin.get(idCompte).toString();
-		}
-		
-		if(idcategoriePersonne==5)//ON A CHOISIE LE PROFIL PRODUCTEUR
-		{	/*numeroLigne=1;
-			res=Connecteur.Extrairedonnees("select * from personne p,producteur pro,compte co where p.Idpersonne=pro.Idproduct and p.Idpersonne=co.Idpersonne");
-			if(listPesonnes==null)
-				listPesonnes=new ArrayList<ImprilacBean>();
-			else
-				listPesonnes.clear();
-			try {
-				while(res.next()&&(numeroLigne<this.idCompte))
-				{numeroLigne++;
-				//listDesPersoAyantLogEtPassW.add(new SelectItem(numeroLigne,res.getString("Login")));	
-				}
-				pkCompte=res.getString("Login");
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}	
-			profil="PRODUCTEURS";*/
-			
-			pkCompte=listCopieLogin.get(idCompte).toString();
-		}
-		
-		if(idcategoriePersonne==6)//ON A CHOISIE LE PROFIL DU CAISSIER
-		{/*	numeroLigne=1;
-			res=Connecteur.Extrairedonnees("select * from personne p,caissier c,compte co where p.Idpersonne=c.Idcaissier and p.Idpersonne=co.Idpersonne");
-			if(listPesonnes==null)
-				listPesonnes=new ArrayList<ImprilacBean>();
-			else
-				listPesonnes.clear();
-			try {
-				while(res.next()&&(numeroLigne<this.idCompte))
-				{numeroLigne++;
-				//listDesPersoAyantLogEtPassW.add(new SelectItem(numeroLigne,res.getString("Login")));	
-				}
-				pkCompte=res.getString("Login");
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			profil="CAISSIERS";*/
-			
-			pkCompte=listCopieLogin.get(idCompte).toString();
-		}
-		
-		//FIN DE LA PARTIE DE RECUPERATION DU CLE PRIMAIRE DE LA TABLE COMPTE
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		System.out.println("pkCompte AVANT LOGIN"+pkCompte);
 		System.out.println("pkCompte AVANT LOGIN"+pkCompte);
 		
@@ -2900,58 +1817,11 @@ System.out.println("");*/
 		
 
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-/*		if(this.==0)
-		{message="CHOISISSER LA PERSONNE A QUI APPARTIENDRA LE COMPTE S'IL VOUS PLAIT!!";
-		return;
-		}*/
-		
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 		if(n==-1)
 		message="ECHEC DE MISE A JOUR!!";
 		else
 		message="MISE A JOUR REUSSIE!!";
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-		
-		//r=Connecteur.Extrairedonnees("select * from compte where Login='"+this.login+"'");
-/*		try {
-		if(!r.next())
-		{message="CE COMPTE N'EXISTE PAS!!";
-		return;
-			}
-		} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();	
-		}
-		//FIN DE LA PARTIE DES TESTS FAITES AVANT LA MISE A JOUR
-		
-		
-		
-		//DEBUT DE LA PARTIE DE MISE A JOUR
-		if(this.login.length()>0)//ON FAIT LA MISE A JOUR DU LOGIN
-		{
-			n=Connecteur.Insererdonnees("UPDATE COMPTE SET Login='"+this.login+"' where Login");
-		}*/
-		//DEBUT DE LA PARTIE DE MISE A JOUR
-		
-		
-
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 	this.modifierCompte=false;
 	this.modifierComptel1=true;
 	}//FIN DE LA PARTIE DE MODIFICATION DES COMPTES
@@ -3043,173 +1913,10 @@ public void identification()
 	//FIN DU TEST QUE LA PERSONNE EST UN CAISSIER
 	
 	message="VOUS N'ETES PAS RECONNU PAR LE SYSTEME!!!";
-<<<<<<< HEAD
-<<<<<<< HEAD
 	
-=======
-
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
-
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 }
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-private int idMateriel=0;
-private int quantiteMateriel=0;
-private String designationMat;
-private List<ImprilacBean> listDesProdDmd;
-
-
-
-
-
-
-
-public List<ImprilacBean> getListDesProdDmd() {
-	return listDesProdDmd;
-}
-public void setListDesProdDmd(List<ImprilacBean> listDesProdDmd) {
-	this.listDesProdDmd = listDesProdDmd;
-}
-public int getIdMateriel() {
-	return idMateriel;
-}
-public void setIdMateriel(int idMateriel) {
-	this.idMateriel = idMateriel;
-}
-public int getQuantiteMateriel() {
-	return quantiteMateriel;
-}
-public void setQuantiteMateriel(int quantiteMateriel) {
-	this.quantiteMateriel = quantiteMateriel;
-}
-
-
-
-
-public String getDesignationMat() {
-	return designationMat;
-}
-public void setDesignationMat(String designationMat) {
-	this.designationMat = designationMat;
-}
-
-
-
-public void ajouteMatSurCmd()
-{int j=0;
-
-System.out.println("Dans idMateriel "+idMateriel);
-System.out.println("Dans idMateriel "+idMateriel);
-if(this.idMateriel==0)
-	{message="CHOISISSER LE MATERIEL S'IL VOUS PLAIT!!!";
-	System.out.println("Dans idMateriel==0 "+idMateriel);
-	return;
-	}
-if(this.quantiteMateriel==0)
-	{message="SAISISSER LA QUANTITE S'IL VOUS PLAIT!!!";
-	System.out.println("LA QUANTITE EST 0");
-	return;
-	}	
-if(listDesProdDmd==null)
-	listDesProdDmd=new ArrayList<ImprilacBean>();
-System.out.println("Size  :"+listDesProdDmd.size());
-while((j<listDesProdDmd.size())&&(listDesProdDmd.get(j).idMateriel!=this.idMateriel))
-{j++;
-	}
-
-if(j<listDesProdDmd.size())
-{listDesProdDmd.get(j).quantiteMateriel+=this.quantiteMateriel;
-return;
-}
-System.out.println("Size  :"+listDesProdDmd.size());
-
-ResultSet r=Connecteur.Extrairedonnees("Select * from materiel where Idmateriel="+this.idMateriel+"");
-ImprilacBean i=new ImprilacBean();
-
-i.idMateriel=this.idMateriel;
-i.quantiteMateriel=this.quantiteMateriel;
-
-try {
-	r.next();
-	i.designationMat=r.getString("Designation");
-} catch (SQLException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-listDesProdDmd.add(i);
-
-System.out.println("Size  :"+listDesProdDmd.size());
-}
-
-
-//DEBUT DE LA FONCTION QUI RECUPERE LE ID DU DERNIER ENREGISTREMENT DE LA TABLE COMMANDE
-public int recuperIDCmd()
-{
-int i=-1;
-ResultSet r=null;
-r=Connecteur.Extrairedonnees("SELECT Iddemande FROM demande order by Iddemande desc limit 1");
-if(r!=null)
-	try {
-		if(r.next()){
-			i=r.getInt("Iddemande");
-		}
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-return i;
-	}
-//FIN DE LA FONCTION QUI RECUPERE LE ID DU DERNIER ENREGISTREMENT DE LA TABLE PERSONNE
-
-
-
-
-
-
-
-public void creerDmdMateriel()
-{int idDmd;
-if(listDesProdDmd.size()==0)	
-	{message="LA COMMANDE EST VIDE!!!";
-	return;
-	}
-int i=-1;
-i=Connecteur.Insererdonnees("insert into demande (Idchefprod,Datedmd,Etatdmd) values (1,now(),false)");
-
-if(i==-1)
-{message="CREATION DEMANDE ECHOUEE!!!";
-return;
-	}
-idDmd=recuperIDCmd();
-int k;
-for(k=0;k<listDesProdDmd.size();k++)
-{System.out.println("Avant");
-i=Connecteur.Insererdonnees("insert into unite_dmde(Iddmd,Idmateriel,Qtitedmd,Autorisation) values ("+idDmd+","+listDesProdDmd.get(k).idMateriel+","+listDesProdDmd.get(k).quantiteMateriel+",'NON')");
-System.out.println("Apres");
-}
-
-if(i==-1)
-message="OPERATION DE DEMANDE DU MATERIEL ECHOUEE!!!";
-else
-message="OPERATION DE DEMANDE DU MATERIEL REUSSIE!!!";
-
-listDesProdDmd.clear();
-}
-
-
-
-<<<<<<< HEAD
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
-=======
->>>>>>> cc23b414b5e2a566fccfaf546b750bc2088dcfa0
 }
