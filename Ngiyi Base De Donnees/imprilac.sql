@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2013 at 08:36 AM
+-- Generation Time: Oct 26, 2013 at 01:18 PM
 -- Server version: 5.1.49
 -- PHP Version: 5.3.3
 
@@ -596,21 +596,31 @@ CREATE TABLE IF NOT EXISTS `unites` (
   `Idunite` int(11) NOT NULL AUTO_INCREMENT,
   `Idunitedmd` int(11) NOT NULL,
   `etat` varchar(20) DEFAULT NULL,
-  `Date` datetime DEFAULT NULL,
+  `DateDernMod` datetime DEFAULT NULL,
   PRIMARY KEY (`Idunite`),
   KEY `fkunite_dmd` (`Idunitedmd`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `unites`
 --
 
-INSERT INTO `unites` (`Idunite`, `Idunitedmd`, `etat`, `Date`) VALUES
-(1, 28, NULL, NULL),
-(2, 28, NULL, NULL),
-(3, 28, NULL, NULL),
-(4, 28, NULL, NULL),
-(5, 28, NULL, NULL);
+INSERT INTO `unites` (`Idunite`, `Idunitedmd`, `etat`, `DateDernMod`) VALUES
+(1, 28, 'EN PANNE', '2013-10-26 11:13:37'),
+(2, 28, 'EN PANNE', '2013-10-26 11:13:37'),
+(3, 28, 'EN PANNE', '2013-10-26 11:13:37'),
+(4, 28, 'EN PANNE', '2013-10-26 11:13:37'),
+(5, 28, 'EN PANNE', '2013-10-26 11:13:37'),
+(6, 24, 'BON ETAT', '2013-10-26 11:32:30'),
+(7, 24, 'BON ETAT', '2013-10-26 11:33:29'),
+(8, 24, 'EN PANNE', '2013-10-26 11:33:29'),
+(9, 24, 'BON ETAT', '2013-10-26 11:33:30'),
+(10, 24, NULL, NULL),
+(11, 24, NULL, NULL),
+(12, 24, NULL, NULL),
+(13, 24, NULL, NULL),
+(14, 24, NULL, NULL),
+(15, 24, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -648,9 +658,6 @@ INSERT INTO `unite_dmde` (`Idunitedmd`, `Idgerant`, `Iddmd`, `Idmateriel`, `Idge
 (3, 9, 2, 2, NULL, 34, 'NON', '', '2013-10-20 22:37:15', 0, NULL),
 (4, 9, 3, 2, NULL, 54, 'NON', 'ghhuu', '2013-10-21 09:00:34', 0, NULL),
 (5, 9, 3, 3, 15, 20, 'OUI', '', '2013-10-21 08:38:23', 20, NULL),
-(6, 9, 4, 2, 15, 25, 'OUI', '', '2013-10-21 08:43:11', 10, 'NON'),
-(7, 9, 4, 5, NULL, 50, 'OUI', '', '2013-10-21 08:50:36', 18, NULL),
-(8, 9, 4, 10, NULL, 150, 'OUI', '', '2013-10-21 08:46:29', 19, NULL),
 (9, 9, 5, 12, 15, 45, 'OUI', '', '2013-10-20 22:42:48', 9, NULL),
 (10, 9, 6, 2, NULL, 4, 'NON', '', '2013-10-20 22:38:39', 0, NULL),
 (11, 9, 7, 2, NULL, 40, 'NON', 'Pae nec', '2013-10-21 09:18:00', 0, NULL),
@@ -666,11 +673,11 @@ INSERT INTO `unite_dmde` (`Idunitedmd`, `Idgerant`, `Iddmd`, `Idmateriel`, `Idge
 (21, 9, 10, 3, NULL, 20, 'NON', 'sgtezjs', '2013-10-21 10:51:21', 0, NULL),
 (22, 9, 10, 11, NULL, 40, 'NON', 'ehdsds', '2013-10-21 10:56:30', 0, NULL),
 (23, 9, 11, 3, NULL, 20, 'NON', 'dhdhd', '2013-10-21 09:31:24', 0, NULL),
-(24, 9, 12, 4, NULL, 20, 'OUI', '', '2013-10-23 17:29:34', 10, NULL),
+(24, 9, 12, 4, 15, 20, 'OUI', '', '2013-10-23 17:29:34', 10, 'NON'),
 (25, 9, 12, 3, NULL, 20, 'OUI', '', '2013-10-23 17:35:18', 10, NULL),
 (26, NULL, 12, 6, NULL, 20, 'NON', NULL, NULL, NULL, NULL),
 (27, 9, 13, 1, NULL, 10, 'OUI', '', '2013-10-23 17:36:50', 5, NULL),
-(28, 9, 13, 2, 15, 20, 'OUI', '', '2013-10-23 17:37:04', 5, 'NON'),
+(28, 9, 13, 2, 15, 20, 'OUI', '', '2013-10-23 17:37:04', 5, 'OUI'),
 (29, 9, 13, 3, NULL, 10, 'OUI', '', '2013-10-23 17:37:21', 5, NULL),
 (30, 9, 14, 3, NULL, 5, 'OUI', '', '2013-10-23 17:35:55', 5, NULL),
 (31, 9, 14, 2, NULL, 5, 'OUI', '', '2013-10-23 17:36:16', 5, NULL),

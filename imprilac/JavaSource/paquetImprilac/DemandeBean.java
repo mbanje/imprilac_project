@@ -16,6 +16,10 @@ public class DemandeBean {
 	private int quantiteDmd=0;
 	private int quantiteMatAccord=0;
 	private int idDmd;
+	private int qtiteEnlist;
+	private int nombreDeMatDejaDansunites=0;
+	private int idUniteDmd;
+	
 	private String designationMat;
 	private List<DemandeBean> listDesProdDmd;
 	private List<DemandeBean> listDesMateriaux;
@@ -26,7 +30,7 @@ public class DemandeBean {
 	private List<SelectItem> listDmdPourHisto;
 	private List<SelectItem> listDMatPourHisto;
 	private List<SelectItem> listDesEtatsDesMat;
-	private List<DemandeBean> listAHistoriser;
+	private List<DemandeBean> listAHistoriser=new ArrayList<DemandeBean>();
 	//Liste des materiaux non encore evaluees(par le gerant)
 	//se trouvant sur une demande.
 	private List<SelectItem> listDesMatNonEvalueSeTrouvSurUneDmd;
@@ -36,6 +40,7 @@ public class DemandeBean {
 	private String motivation;
 	private int etatMat;
 	private String etatMatString;
+	//private boolean ajoute=true;
 	
 	
 	
@@ -48,6 +53,18 @@ public class DemandeBean {
 	
 	
 	
+	public int getIdUniteDmd() {
+		return idUniteDmd;
+	}
+	public void setIdUniteDmd(int idUniteDmd) {
+		this.idUniteDmd = idUniteDmd;
+	}
+	public int getQtiteEnlist() {
+		return qtiteEnlist;
+	}
+	public void setQtiteEnlist(int qtiteEnlist) {
+		this.qtiteEnlist = qtiteEnlist;
+	}
 	public String getEtatMatString() {
 		return etatMatString;
 	}
@@ -735,11 +752,17 @@ public class DemandeBean {
 	public void marquerSortieMat()
 	{	ResultSet res=null;
 		int n=-1,m=-1;
+		//ON MARQUE LA SORTIE DU MATERIEL.TOUT CE MATERIEL EST SORTI
+		//D'UN COUP
 		n=Connecteur.Insererdonnees("update unite_dmde set Idgestion=15,Historise='NON' where Iddmd="+this.idDmd+" and Idmateriel="+this.idMateriel+"");
-   res=Connecteur.Extrairedonnees("select * from unite_dmde where Iddmd="+this.idDmd+" and Autorisation='OUI' and Idgestion is null");	
-try {
+   //ON VERIFIE S'IL Y AURAIT ENCORE DU MATERIEL A SORTIR SUR CETTE DEMANDE
+		res=Connecteur.Extrairedonnees("select * from unite_dmde where Iddmd="+this.idDmd+" and Autorisation='OUI' and Idgestion is null");	
+try {//SI PLUS DU MATERIEL A SORTIR SUR CETTE DEMANDE
 	if(!res.next())
-		{res=Connecteur.Extrairedonnees("select * from unite_dmde where Iddmd="+this.idDmd+" and Idgerant is null");
+		{//ON VERIFIE S'IL N'Y AURAIT PAS DU MATERIEL NON ENCORE ETUDIE
+		//PAR LE GERANT SUR CETTE DEMANDE
+		res=Connecteur.Extrairedonnees("select * from unite_dmde where Iddmd="+this.idDmd+" and Idgerant is null");
+		//S'IL N'Y EN A PAS, LA COMMANDE PASSE A L'ETAT 'TERMINEE'
 		if(!res.next())
 			m=Connecteur.Insererdonnees("update demande set Etatdmd='TERMINEE' where Iddemande="+this.idDmd+"");
 		}
@@ -778,7 +801,9 @@ k=Connecteur.Insererdonnees("insert into unites (Idunitedmd) values ("+m+")");
 	
 	
 public void ecouteAjouteHisto()
-{ResultSet res=null;
+{System.out.println("000");
+	ResultSet res=null;
+	
 if(this.idDmd==0)
 {message="CHOISISSER LA DEMANDE S'IL VOUS PLAIT!!";
 return;
@@ -791,9 +816,6 @@ return;
 
 System.out.println("this.etatMat"+this.etatMat);
 
-
-/*listDesEtatsDesMat.add(new SelectItem(""));
-listDesEtatsDesMat.add(new SelectItem(""));*/
 System.out.println("111");
 System.out.println("this.etatMat"+this.etatMat);
 if(this.etatMat==0)
@@ -801,9 +823,68 @@ if(this.etatMat==0)
 System.out.println("222");
 return;
 	}
-System.out.println("333");
-System.out.println("this.idMateriel"+this.idMateriel);
-System.out.println("444");
+
+
+//IL FAUT QUE JE CHERCHE LE NOMBRE DE CE MATERIEL DEJA ENREGISTRE DANS
+//unites
+res=Connecteur.Extrairedonnees("select Idunitedmd from unite_dmde where Iddmd="+this.idDmd+" and Idmateriel="+this.idMateriel+"");
+try {
+	res.next();
+	this.idUniteDmd=res.getInt("Idunitedmd");
+} catch (SQLException e1) {
+	// TODO Auto-generated catch block
+	e1.printStackTrace();
+}
+
+
+this.nombreDeMatDejaDansunites=0;
+
+res=Connecteur.Extrairedonnees("select * from unites where Idunitedmd="+this.idUniteDmd+" and etat is not null");
+try {
+	while(res.next())
+	{
+		this.nombreDeMatDejaDansunites++;
+	}
+
+} catch (SQLException e1) {
+	// TODO Auto-generated catch block
+	e1.printStackTrace();
+}
+
+//SI TOUT CE MATERIEL A DEJA ETE ENREGISTRE
+if(this.nombreDeMatDejaDansunites>=this.quantiteMatAccord)
+{message="TOUT CE MATERIEL EST DEJA ENREGISTRE";
+return;
+	}
+
+
+int i=1;
+//listAHistoriser=new ArrayList<DemandeBean>();
+//System.out.println("LA TAILLE D'UNE LISTE VIDE EST "+listAHistoriser.size());
+System.out.println("-1-1-1");
+System.out.println("listAHistoriser.size() avant while"+listAHistoriser.size());
+while(i<=listAHistoriser.size())
+{System.out.println("-2-2-2");
+System.out.println("listAHistoriser.size() dans while"+listAHistoriser.size());
+
+	if(listAHistoriser.get(i-1).idUniteDmd==this.idUniteDmd)
+		{System.out.println("-3-3-3");
+		this.nombreDeMatDejaDansunites++;
+		System.out.println("-4-4-4");
+		}
+	System.out.println("-5-5-5");
+i++;
+}
+
+
+if(this.nombreDeMatDejaDansunites>=this.quantiteMatAccord)
+{message="TOUT CE MATERIEL EST DEJA ENREGISTRE";
+return;
+	}
+
+//ON BLOCK L'AJOUT DU MATERIEL SUR LA LISTE ALORS QU'IL N'Y A PLUS
+//CE MATERIEL
+
 if(this.etatMat==1)
 	this.etatMatString="BON ETAT";
 if(this.etatMat==2)
@@ -822,14 +903,52 @@ if(listAHistoriser==null)
 	listAHistoriser=new ArrayList<DemandeBean>();
 System.out.println("666");
 DemandeBean d=new DemandeBean();
+d.idUniteDmd=this.idUniteDmd;
 d.idDmd=this.idDmd;
 d.idMateriel=this.idMateriel;
 d.designationMat=this.designationMat;
 d.etatMatString=this.etatMatString;
 listAHistoriser.add(d);
 System.out.println("777");
-
+message="FAIT!";
 	}
 
-	
+
+public void updateUnite()
+{
+int j,n=-1,idUni;
+ResultSet res=null;
+for(j=0;j<this.listAHistoriser.size();j++)
+{n=-1;
+res=Connecteur.Extrairedonnees("select * from unites where etat is null and Idunitedmd="+this.listAHistoriser.get(j).idUniteDmd+"");
+try {
+	if(res.next())
+	{	//ON RECCUPERE L'id DU PREMIER
+		idUni=res.getInt("Idunite");
+		n=Connecteur.Insererdonnees("update unites set etat='"+this.listAHistoriser.get(j).etatMatString+"', DateDernMod=now() where Idunitedmd="+this.listAHistoriser.get(j).idUniteDmd+" and Idunite="+idUni+"");
+
+	}
+} catch (SQLException e1) {
+	// TODO Auto-generated catch block
+	e1.printStackTrace();
+}
+
+
+
+//ON VERIFIT S'IL Y A ENCORE UN MATERIEL DE CE TYPE QUI N'EST PAS HISTORISE
+res=Connecteur.Extrairedonnees("select * from unites where Idunitedmd="+this.listAHistoriser.get(j).idUniteDmd+" and etat is null");
+try {//SI TOUT CE MATERIEL EST DEJA HISTORISE
+	if(!res.next())
+	{n=-1;
+	n=Connecteur.Insererdonnees("update unite_dmde set Historise='OUI' where Idunitedmd="+this.listAHistoriser.get(j).idUniteDmd+"");
+	}
+} catch (SQLException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+
+}
+this.listAHistoriser.clear();
+	}
+
 }

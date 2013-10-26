@@ -38,7 +38,8 @@
   			</h:selectOneMenu>
   			
   			</h:panelGrid>
-  			<a4j:commandButton value="AJOUTER" action="#{demandeBine.ecouteAjouteHisto}" reRender="mat,dmd,qmatacco,tab"/> 
+  			<a4j:commandButton value="AJOUTER" action="#{demandeBine.ecouteAjouteHisto}"  data="#{demandeBine.message}" oncomplete="alert(data)" reRender="mat,dmd,qmatacco,tab"/> 
+  			<a4j:commandButton value="VALIDER" action="#{demandeBine.updateUnite}"  data="#{demandeBine.message}" oncomplete="alert(data)" reRender="mat,dmd,qmatacco,tab"/> 
   		
   		</h:form>
   		
