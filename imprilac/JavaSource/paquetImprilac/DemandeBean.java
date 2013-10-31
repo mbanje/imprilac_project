@@ -3,6 +3,7 @@ package paquetImprilac;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.faces.model.SelectItem;
@@ -30,7 +31,9 @@ public class DemandeBean {
 	private List<SelectItem> listDmdPourHisto;
 	private List<SelectItem> listDMatPourHisto;
 	private List<SelectItem> listDesEtatsDesMat;
+	private List<SelectItem> listDesEtatsDesMat1;
 	private List<DemandeBean> listAHistoriser=new ArrayList<DemandeBean>();
+	private List<DemandeBean> listMatHistoriser;
 	//Liste des materiaux non encore evaluees(par le gerant)
 	//se trouvant sur une demande.
 	private List<SelectItem> listDesMatNonEvalueSeTrouvSurUneDmd;
@@ -40,6 +43,12 @@ public class DemandeBean {
 	private String motivation;
 	private int etatMat;
 	private String etatMatString;
+	
+	
+	private int idUnites;
+	private String nomMateriel;
+	private Date dateDrnMod=null;
+	private DemandeBean selected;
 	//private boolean ajoute=true;
 	
 	
@@ -53,8 +62,71 @@ public class DemandeBean {
 	
 	
 	
-	public int getIdUniteDmd() {
-		return idUniteDmd;
+
+
+	public DemandeBean getSelected() {
+		return selected;
+	}
+	public void setSelected(DemandeBean selected) {
+		this.selected = selected;
+	}
+	public int getNombreDeMatDejaDansunites() {
+		return nombreDeMatDejaDansunites;
+	}
+	public void setNombreDeMatDejaDansunites(int nombreDeMatDejaDansunites) {
+		this.nombreDeMatDejaDansunites = nombreDeMatDejaDansunites;
+	}
+	public List<DemandeBean> getListMatHistoriser() {
+		
+		ResultSet res=null;
+        DemandeBean Mat=null;	
+		if(listMatHistoriser==null)
+			listMatHistoriser=new ArrayList<DemandeBean>();
+		else
+			listMatHistoriser.clear();
+		
+		
+			res=Connecteur.Extrairedonnees("SELECT * FROM unites, materiel, unite_dmde WHERE unites.Idunitedmd = unite_dmde.Idunitedmd AND materiel.Idmateriel = unite_dmde.Idmateriel ");
+
+		try {
+			while(res.next())
+			{Mat=new DemandeBean();
+			Mat.idUnites=res.getInt("Idunite");
+			Mat.nomMateriel=res.getString("Designation");
+			Mat.etatMatString=res.getString("etat");
+			Mat.dateDrnMod=res.getDate("DateDernMod");
+		
+
+			listMatHistoriser.add(Mat);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return listMatHistoriser;
+	}
+	public void setListMatHistoriser(List<DemandeBean> listMatHistoriser) {
+		this.listMatHistoriser = listMatHistoriser;
+	}
+	public int getIdUnites() {
+		return idUnites;
+	}
+	public void setIdUnites(int idUnites) {
+		this.idUnites = idUnites;
+	}
+	public String getNomMateriel() {
+		return nomMateriel;
+	}
+	public void setNomMateriel(String nomMateriel) {
+		this.nomMateriel = nomMateriel;
+	}
+	public Date getDateDrnMod() {
+		return dateDrnMod;
+	}
+	public void setDateDrnMod(Date dateDrnMod) {
+		this.dateDrnMod = dateDrnMod;
 	}
 	public void setIdUniteDmd(int idUniteDmd) {
 		this.idUniteDmd = idUniteDmd;
@@ -88,6 +160,26 @@ public class DemandeBean {
 	public void setEtatMat(int etatMat) {
 		this.etatMat = etatMat;
 	}
+	
+	public int getIdUniteDmd() {
+		return idUniteDmd;
+	}
+	public void setListDesEtatsDesMat1(List<SelectItem> listDesEtatsDesMat1) {
+		this.listDesEtatsDesMat1 = listDesEtatsDesMat1;
+	}
+	public List<SelectItem> getListDesEtatsDesMat1() {
+		if(listDesEtatsDesMat1==null)
+			listDesEtatsDesMat1=new ArrayList<SelectItem>();
+		else 
+			listDesEtatsDesMat1.clear();
+		
+		listDesEtatsDesMat1.add(new SelectItem(0,""));
+		listDesEtatsDesMat1.add(new SelectItem(1,"BON ETAT"));
+		listDesEtatsDesMat1.add(new SelectItem(2,"EN PANNE"));
+		listDesEtatsDesMat1.add(new SelectItem(3,"ENDOMAGE"));
+		return listDesEtatsDesMat1;
+	}
+	
 	public List<SelectItem> getListDesEtatsDesMat() {
 		if(listDesEtatsDesMat==null)
 			listDesEtatsDesMat=new ArrayList<SelectItem>();
@@ -950,5 +1042,27 @@ try {//SI TOUT CE MATERIEL EST DEJA HISTORISE
 }
 this.listAHistoriser.clear();
 	}
+
+
+public void modifierEtatMat()
+{int n=-1;
+if(this.selected.etatMat==0)
+	{System.out.println("this.selected.etatMat"+this.selected.etatMat);
+	message="VOUS N'AVEZ RIEN CHANGE!!";
+	return;
+	}
+if(this.selected.etatMat==1)
+	this.selected.etatMatString="BON ETAT";
+if(this.selected.etatMat==2)
+	this.selected.etatMatString="EN PANNE";
+if(this.selected.etatMat==3)
+	this.selected.etatMatString="ENDOMAGE";
+System.out.println("this.selected.etatMatString"+this.selected.etatMatString);
+n=Connecteur.Insererdonnees("update unites set etat='"+this.selected.etatMatString+"',DateDernMod=now() where Idunite="+this.selected.idUnites+"");
+if(n==-1)
+message="ECHEC DE MISE A JOUR!!";
+else
+message="MISE A JOUR REUSSIE!!";
+}
 
 }

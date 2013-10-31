@@ -12,6 +12,7 @@
   <a4j:keepAlive beanName="bine" />
   
   <rich:panel style ="width:700px;font-size:35px;margin-left:250px;" >
+  <f:facet name="header">PAGE D'ENREGISTREMENT DE PERSONNES</f:facet>
   	<h:form id="fo">
   	<h:panelGrid columns="2">
   	
@@ -80,7 +81,7 @@
   	
   	
   	<h:form>
-  	<rich:panel>
+  	<rich:panel style ="width:700px;font-size:35px;margin-left:250px;">
   		<rich:dataTable id="tab" value="#{bine.listPesonnes}" var="per">
   		<f:facet name="header">LISTE DES #{bine.profil}</f:facet>
  
@@ -194,14 +195,11 @@
 <a4j:commandButton action="#{bine.modifierPersonne}" value="MODIFIER" data="#{bine.message}" oncomplete="alert(data)" reRender="tab" />
 		</h:form>
 	</h:panelGroup>
+	
+	
   </rich:modalPanel> 
   	
   	
-  	
-  	
-  	
-  	
- 
   	
   	
   </body>
